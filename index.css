@@ -1,0 +1,85 @@
+html,
+body,
+header,
+main,
+footer {margin:0;padding:0;}
+
+html {
+    height: 100%;
+    max-width: 100%;
+    overflow-y: scroll;
+    scroll-behavior: smooth;
+}
+
+body {
+    margin:0;
+    min-height:100vh;
+    width:100%;
+    display:flex;
+    flex-direction:column;
+    justify-content:space-between;
+    align-items:center;
+}
+
+header {
+    width:100%;
+    display:flex;
+    flex-direction:column;
+}
+
+#Announcement {
+    flex:1 1 20%;
+    display:flex;
+    background:gold;
+}
+
+#Logo {
+    flex: 1 1 50%;
+    display:flex;
+    background: yellow;
+}
+
+#Menu {
+    flex: 1 1 30%;
+    display:flex;
+    background: orange;
+}
+
+main {
+    width:100%;
+    display:flex;
+    flex-direction:row;
+    justify-content:center;
+    background:beige;
+}
+
+#Hero {
+    background:steelblue;
+}
+#Upcoming {
+    background:turquoise;
+}
+
+#Sponsors-Top {height:120px;}
+#Schedule {height: 400px;}
+#News {height:300px;}
+#GalleryHero {height:300px;}
+#Sponsors-Bottom {height:200px;}
+
+footer {
+    width: 100%;
+    display:flex;
+    flex-direction:column;
+    justify-content: space-between;    
+}
+
+#Footer-Content {
+    height:200px;
+    flex: 1 0 200px;
+    background: brown;
+}
+
+#Copyright {
+    height:32px;
+    background:darkslategrey;
+}

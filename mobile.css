@@ -1,0 +1,72 @@
+@media only screen and (max-width:768px) {
+    #left-aside,
+    #right-aside {
+        display: none;
+    }
+
+    #main-center {
+        flex: 1 1 100vw;
+    }
+}
+
+/* Medium devices (landscape tablets, landscape Samsung Galaxy S8) */
+@media only screen and (min-width:768px) {
+    #left-aside,
+    #right-aside {
+        flex:1 1 10vw;
+    }
+    #main-center {flex: 1 0 90vw;}
+}
+/* Large devices (laptops/desktops) */
+@media only screen and (min-width:992px) {
+    #left-aside,
+    #right-aside {
+        flex: 1 1 15vw;
+    }
+
+    #main-center {
+        flex: 1 1 70vw;
+    }
+}
+
+/* Extra large devices (large laptops and desktops) */
+@media only screen and (min-width:1650px) {
+    #left-aside,
+    #right-aside {
+        flex: 1 1 30vw;
+    }
+
+    #main-center {
+        flex: 1 1 40vw;
+    }
+}
+
+/* Edge case for portrait desktop monitors */
+
+@media only screen and (min-height:300px) {
+    header {
+        height: 20vh;
+    }
+
+    #Hero {
+        height: 60vh;
+    }
+
+    #Upcoming {
+        height: 40vh;
+    }
+}
+
+@media only screen and (min-height:1024px) {
+    header {
+        height: 10vh;
+    }
+
+    #Hero {
+        height: 30vh;
+    }
+
+    #Upcoming {
+        height: 10vh;
+    }
+}
