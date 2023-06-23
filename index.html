@@ -3,32 +3,384 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="mobile.css">
-    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="global.css">
+    <link rel="stylesheet" href="main.css">
     <title>Archery Guyana</title>
 </head>
-<body>
-    <header>
-        <div id="Announcement">ANNOUNCEMENT</div>
-        <div id="Logo">LOGO</div>
-        <div id="Menu">MENU</div>
-    </header>
-    <main>
-        <div id="left-aside">LEFT ASIDE</div>
-        <div id="main-center">
-            <div id="Hero">HERO</div>
-            <div id="Upcoming">UPCOMING</div>
-            <div id="Sponsors-Top" class="Sponsors">SPONSORS</div>
-            <div id="Schedule">SCHEDULE</div>
-            <div id="News">NEWS</div>
-            <div id="GalleryHero">GALLERY</div>
-            <div id="Sponsors-Bottom" class="Sponsors">SPONSORS</div>
+<body class="container">
+    <header class="header caret-hidden">
+        <div id="SystemBar">            
+            <div id="Affiliations">
+                <span>O</span>
+                <span>WA</span>
+            </div>            
+            <div id="Logo">
+                <img src="./static/archery-guyana-rich-logo.jpg" alt="" class="logo">
+            </div>            
+            <div id="Social-Links">
+                <span>FB</span>
+                <span>YT</span>
+            </div>
+            <input type="checkbox" id="toggler" class="checkbox1 visually-hidden">
+            <label for="toggler" class="nav-label">
+                <div class="hamburger hamburger1">
+                    <span class="bar bar1"></span>
+                    <span class="bar bar2"></span>
+                    <span class="bar bar3"></span>
+                    <span class="bar bar4"></span>
+                </div>
+            </label>
+            <div id="SystemBarNavigation">
+                <ul>
+                    <li><a href="#">Events</a></li>
+                    <li><a href="#">Gallery</a></li>
+                    <li><a href="#">Sponsors</a></li>
+                    <li><a href="#">Scores</a></li>
+                    <li><a href="#">News</a></li>
+                    <li><a href="#">Become a Member</a></li>
+                </ul>
+            </div>                    
         </div>
-        <div id="right-aside">RIGHT ASIDE</div>
+        <div id="Navigation">
+            <ul id="Menu">
+                <li id="Events"><a href="# ">Events</a></li>
+                <li id="Gallery"><a href="#">Gallery</a></li>
+                <li id="Sponsors"><a href="#">Sponsors</a></li>
+                <li id="Scores"><a href="#">Scores</a></li>
+                <li id="News"><a href="#">News</a></li>
+                <li id="Membership"><a href="#">Become a Member</a></li>
+            </ul>
+        </div>
+    </header>
+    <main id="Main" class="main">
+        <div id="Hero" class="carousel">
+            <button class="slide-arrow" id="slide-arrow-prev">
+                <img src="./static/icons8-next-page-96.png" alt="" class="slide-arrow-prev-icon flipped">
+            </button>
+            <button class="slide-arrow" id="slide-arrow-next">
+                <img src="./static/icons8-next-page-96.png" alt="" class="slide-arrow-next-icon">
+            </button>
+            <div id="slides-container">
+                <div id="slide-1" class="Hero-Slide">
+                    <div id="slide-1-content" class="Hero-Content">
+                        <span id="Welcome">Come shoot with us!</span>
+                        <span id="Shout">Get Involved!</span>
+                        <span id="Verbose">Browse the Archery Guyana Event Calendar to view our upcoming events and get
+                            registered!</span>
+                        <button id="Event-Calendar-Button" class="hero-button">Event Calendar</button>
+                    </div>
+                    <div id="slide-1-image" class="Hero-Image"></div>
+                    <div id="Overlay" class="vertical-gradient"></div>
+                </div>
+                <div id="slide-2" class="Hero-Slide">
+                    <div id="slide-2-content" class="Hero-Content">
+                        <span id="Welcome">Upcoming</span>
+                        <span id="event-title">Archery Guyana Open Competition</span>
+                        <span id="upcoming-event-date">11 NOVEMBER</span>
+                        <span id="upcoming-event-time">3PM-6PM</span>
+                        <span id="upcoming-event-venue">National Park Tarmac</span>
+                        <span id="Verbose">
+                            All are invited to compete in the Archery Guyana Open Competition!
+                        </span>
+                        <button id="register-button" class="hero-button">Register</button>
+                    </div>
+                    <div id="slide-2-image" class="Hero-Image"></div>
+                    <div id="Overlay" class="vertical-gradient"></div>
+                </div>
+                <div id="slide-3" class="Hero-Slide">
+                    <div id="slide-3-content" class="Hero-Content">
+                        <span id="Welcome">Concluded</span>
+                        <span id="event-title">Archery Guyana Open Competition</span>
+                        <span id="upcoming-event-date">11 NOVEMBER</span>
+                        <span id="upcoming-event-time">3PM-6PM</span>
+                        <span id="upcoming-event-venue">National Park Tarmac</span>
+                        <span id="Verbose">
+                            All are invited to compete in the Archery Guyana Open Competition!
+                        </span>
+                        <button id="register-button" class="hero-button">Register</button>
+                    </div>
+                    <div id="slide-3-image" class="Hero-Image"></div>
+                    <div id="Overlay" class="vertical-gradient"></div>
+                </div>
+                <div id="slide-4" class="Hero-Slide">
+                    <div id="slide-4-content" class="Hero-Content">
+                        <span id="Welcome">Come shoot with us!</span>
+                        <span id="Shout">Get Involved!</span>
+                        <span id="Verbose">Browse the Archery Guyana Event Calendar to view our upcoming events and get
+                            registered!</span>
+                        <button id="Event-Calendar-Button" class="hero-button">Event Calendar</button>
+                    </div>
+                    <div id="slide-4-image" class="Hero-Image"></div>
+                    <div id="Overlay" class="vertical-gradient"></div>
+                </div>
+                <div id="slide-5" class="Hero-Slide">
+                    <div id="slide-5-content" class="Hero-Content">
+                        <span id="Welcome">Come shoot with us!</span>
+                        <span id="Shout">Get Involved!</span>
+                        <span id="Verbose">Browse the Archery Guyana Event Calendar to view our upcoming events and get
+                            registered!</span>
+                        <button id="Event-Calendar-Button" class="hero-button">Event Calendar</button>
+                    </div>
+                    <div id="slide-5-image" class="Hero-Image"></div>
+                    <div id="Overlay" class="vertical-gradient"></div>
+                </div>
+
+            </div>
+        </div>        
+        <div id="Announcement">
+            <span id="caution-sign"></span>
+            <span class="announcement-message">
+                <span class="char-limited">
+                    NEW MEMBERS ALL BEGINNER CLASSES have a FRIDAY OPTION at 9AM. If you want the Friday option you just go to that
+                    specified range fifteen minutes before shoot time listed (9am or 1pm).
+                </span>
+                <a href="">
+                    MORE
+                </a>
+            </span>
+        </div>        
+        <div id="Upcoming">
+            <div class="upcoming-event-details">
+                <div class="section-header">Next Upcoming Event</div>
+                <div class="upcoming-event-title">Archery Guyana Open Contest</div>
+                <div class="upcoming-event-venue">National Park Tarmac</div>
+                <div class="upcoming-event-date">11 November 2023</div>
+                <div class="upcoming-event-time">3PM-6PM</div>
+                <button class="upcoming-event-registration-button">Register Now</button>
+            </div>
+            <div class="upcoming-event-countdown-timer">
+                <div class="countdown-card" id="days">
+                    <div class="countdown-card-top">24</div>
+                    <div class="countdown-card-bottom">Days</div>
+                </div>
+                <div class="countdown-card" id="hours">
+                    <div class="countdown-card-top">32</div>
+                    <div class="countdown-card-bottom">Hours</div>
+                </div>
+                <div class="countdown-card" id="minutes">
+                    <div class="countdown-card-top">18</div>
+                    <div class="countdown-card-bottom">Minutes</div>
+                </div>
+                <div class="countdown-card" id="seconds">
+                    <div class="countdown-card-top">9</div>
+                    <div class="countdown-card-bottom">Seconds</div>
+                </div>
+            </div>
+        </div>
+        <div id="Sponsors-Top" class="Sponsors">
+            <div class="sponsor-logos">
+                <img src="./static/bounty-logo.jpg" alt="" class="homepage-sponsor-logo-square">
+                <img src="./static/seven-seas-logo.webp" alt="" class="homepage-sponsor-logo-square">
+                <img src="./static/guyana-beverages-inc-logo.png" alt="" class="homepage-sponsor-logo-square">
+                <img src="./static/massy-logo.png" alt="" class="homepage-sponsor-logo-wide">
+                <img src="./static/nsc-logo.jpg" alt="" class="homepage-sponsor-logo-square">
+            </div>
+            <div class="sponsor-controls">
+                <button class="sponsors-button">View All Sponsors</button>
+            </div>
+        </div>
+        <div id="Schedule">
+            <div class="section-header">Events</div>
+            <div class="table-viewport">
+                <table>
+                    <thead>
+                        <tr>
+                            <td>date</td>
+                            <td>time</td>
+                            <td>event</td>
+                            <td>venue</td>
+                            <td>action</td>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td label="date">11 November 2023</td>
+                            <td label="time">3PM-6PM</td>
+                            <td label="event">Archery Guyana Open Competition</td>
+                            <td label="venue">Muslim Youth Organisation</td>
+                            <td label="action"><a href="#" class="table-button">Register</a></td>
+                        </tr>
+                        <tr>
+                            <td label="date">11 November 2023</td>
+                            <td label="time">3PM-6PM</td>
+                            <td label="event">Archery Guyana Open Competition</td>
+                            <td label="venue">Muslim Youth Organisation</td>
+                            <td label="action"><a href="#" class="table-button">View Scores</a></td>
+                        </tr>
+                        <tr>
+                            <td label="date">11 November 2023</td>
+                            <td label="time">3PM-6PM</td>
+                            <td label="event">Archery Guyana Open Competition</td>
+                            <td label="venue">Muslim Youth Organisation</td>
+                            <td label="action"><a href="#" class="table-button">View Scores</a></td>
+                        </tr>
+                        <tr>
+                            <td label="date">11 November 2023</td>
+                            <td label="time">3PM-6PM</td>
+                            <td label="event">Archery Guyana Open Competition</td>
+                            <td label="venue">Muslim Youth Organisation</td>
+                            <td label="action"><a href="#" class="table-button">View Scores</a></td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="table-viewport-controls">
+                    <button>View All Events</button>
+                    <button>View Scores</button>
+                </div>
+            </div>
+        </div>
+        <div id="LatestNews">
+            <div class="section-header">News</div>
+            <div class="card featured">                
+                <div class="card-image featured-news-image">
+                    <div class="card-date">
+                        <div class="card-month">MAR</div>
+                        <div class="card-day">03</div>
+                    </div>
+                </div>
+                <div class="card-content featured-news-content">
+                    <span class="card-label-featured">Featured</span>
+                    <span class="featured-news-item-title">
+                        Seven Seas sponsored Archery Guyana National Indoor Championships 2023 deemed a resounding success
+                    </span>
+                    <p class="featured-news-item-excerpt">
+                        Archery Guyana brought the curtains down on its Seven Seas National Indoor Championships 2023 on Sunday 30th April, 2023
+                        at the National Gymnasium.
+                    </p>
+                </div>
+            </div>
+            <div class="card news-card">
+                <div id="latest-news-1" class="card-image news-card-image">
+                    <div class="card-date">
+                        <div class="card-month">MAY</div>
+                        <div class="card-day">20</div>
+                    </div>
+                </div>
+                <div class="card-content news-card-content">
+                    <span class="featured-news-item-title">
+                        Archery Guyana’s Independence Open 2023 competition: Massy proud to sponsor Archery Guyana’s activity
+                    </span>
+                    <p class="news-card-excerpt">
+                        At a simple handing over ceremony on Thursday, May 18, 2023 at the Massy Eccles, EBD location, Archery Guyana were
+                        presented with a sponsorship cheque for their upcoming Independence Open 2023 Competition, which will be held on the
+                        weekend of May 27 and 28, 2023 at the Muslim Youth Organisation Ground on Woolford Avenue in Georgetown.
+                    </p>
+                </div>
+            </div>
+            <div class="card news-card">
+                <div id="latest-news-2" class="card-image news-card-image">
+                    <div class="card-date">
+                        <div class="card-month">MAY</div>
+                        <div class="card-day">10</div>
+                    </div>
+                </div>
+                <div class="card-content news-card-content">
+                    <span class="featured-news-item-title">
+                        Archery introduced to SVN School
+                    </span>
+                    <p class="news-card-excerpt">
+                        The students and teachers of the Saraswati Vidya Niketan were on Monday, May 8, 2023 treated to an exciting introduction
+                        to the sport of archery, by Archery Guyana. National Head Coach Nicholas Hing and Chair of the Tech Committee Saeed
+                        Karim, visited the school to give demonstrations and have the excited students (and teachers) try out the sport
+                        themselves.
+                    </p>
+                </div>
+            </div>
+            <div class="card news-card">
+                <div id="latest-news-3" class="card-image news-card-image">
+                    <div class="card-date">
+                        <div class="card-month">APR</div>
+                        <div class="card-day">13</div>                        
+                    </div>
+                </div>
+                <div class="card-content news-card-content">
+                    <span class="featured-news-item-title">
+                        Archery Guyana represented at the IX Copa Merengue in Santo Domingo
+                    </span>
+                    <p class="news-card-excerpt">
+                    The Board of Directors of Archery Guyana recently announced very exciting news for the Organization, which will see two
+                    of their members, namely Wayne DeAbreu and Devin Persaud Permaul who will be participating in the IX Copa Merengue, in
+                    Santo Domingo, Dominican Republic on April 11-15, 2023.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div id="GalleryHero">
+            <div id="gallery-hero-content" class="gallery-hero-content">
+                <span id="gallery-hero-shout" class="shout">Event Photos and Videos</span>
+                <span id="gallery-hero-verbose" class="verbose">See all the amazing photos and videos from our Archery Guyana events!</span>
+                <div class="gallery-hero-controls">
+                    <button id="event-photos-button" class="gallery-hero-button">Photos</button>
+                    <button id="event-videos-button" class="gallery-hero-button">Videos</button>
+                </div>
+            </div>
+            <div id="gallery-hero-image" class="gallery-hero-image"></div>
+            <div id="gallery-hero-overlay" class="vertical-gradient"></div>
+        </div>
+        <div id="Sponsors-Bottom" class="Sponsors">
+            <div class="sponsor-logos">
+                <img src="./static/bounty-logo.jpg" alt="" class="homepage-sponsor-logo-square">
+                <img src="./static/seven-seas-logo.webp" alt="" class="homepage-sponsor-logo-square">
+                <img src="./static/guyana-beverages-inc-logo.png" alt="" class="homepage-sponsor-logo-square">
+                <img src="./static/massy-logo.png" alt="" class="homepage-sponsor-logo-wide">
+                <img src="./static/nsc-logo.jpg" alt="" class="homepage-sponsor-logo-square">
+            </div>
+            <div class="sponsor-controls">
+                <button class="sponsors-button">View All Sponsors</button>
+            </div>
+        </div>
     </main>
-    <footer>
-        <div id="Footer-Content">FOOTER</div>
-        <div id="Copyright">Copyright 2023</div>
+    <footer id="Footer">
+        <div id="Footer-Content">
+            <div class="footer-category" id="about">
+                <span class="footer-category-label">About</span>
+                <ul class="footer-category-links" id="about-links">
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Sponsors</a></li>
+                </ul>
+            </div>
+            <div class="footer-category" id="resources">
+                <span class="footer-category-label">Resources</span>
+                <ul class="footer-category-links" id="resources-links">
+                    <li><a href="#">News</a></li>
+                    <li><a href="#">Download Membership Forms</a></li>
+                </ul>
+            </div>
+            <div class="footer-category" id="quick-links">
+                <span class="footer-category-label">Quick Links</span>
+                <ul class="footer-category-links" id="resources-links">
+                    <li><a href="#">Events</a></li>
+                    <li><a href="#">Photos</a></li>
+                    <li><a href="#">Videos</a></li>
+                    <li><a href="#">Scores</a></li>
+                </ul>
+            </div>
+            <div class="footer-category" id="contact">
+                <span class="footer-category-label">Contact</span>
+                <ul class="footer-category-links" id="resources-links">
+                    <li><a href="#">Send Us A Message</a></li>
+                    <li><a href="#">(592) 614-3843</a></li>
+                    <li><a href="#">Facebook</a></li>
+                </ul>
+            </div>
+        </div>
+        <div id="Copyright">&copy;2023 Archery Guyana Inc.</div>
     </footer>
+    <script>
+        const slidesContainer = document.getElementById("slides-container");
+        const slide = document.querySelector(".Hero-Slide");
+        const prevButton = document.getElementById("slide-arrow-prev");
+        const nextButton = document.getElementById("slide-arrow-next");
+
+        nextButton.addEventListener("click", () => {
+            const slideWidth = slide.clientWidth;
+            slidesContainer.scrollLeft += slideWidth;
+        });
+
+        prevButton.addEventListener("click", () => {
+            const slideWidth = slide.clientWidth;
+            slidesContainer.scrollLeft -= slideWidth;
+        });
+    </script>
 </body>
 </html>

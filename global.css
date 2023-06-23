@@ -1,0 +1,79 @@
+:root {
+    --color-primary-1:#4157AC;
+    --color-primary-2:#0BF40A;
+    --color-primary-3:#fff109;
+    --color-primary-4:#DF2733;
+    --color-primary-2-rgb:rgb(11,244,10);
+    --color-primary-3-rgb:rgb(255,241,9);
+}
+
+html {
+    height: 100%;
+    max-width: 100%;
+}
+
+html,
+body,
+header,
+main,
+footer,
+a {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    overflow-x: hidden;
+    overflow-y: scroll;
+    scroll-behavior: smooth;
+}
+
+label {
+    padding: 0;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+li {
+    display: inline-block;
+}
+
+a:visited {
+    color:white;
+    text-decoration:none;
+}
+
+.caret-hidden {
+    caret-color: transparent;
+}
+
+.visually-hidden {
+    position: absolute;
+    right: 0;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    width: 1px;
+    margin: -1px;
+    padding: 0;
+    border: 0;
+}
+
+.flipped {
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
+}
+
+/* Buttons */
+
+
+/* Typography */

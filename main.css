@@ -1,0 +1,657 @@
+.container {
+    display:flex;
+    flex-direction:column;
+    justify-content: space-between;
+}
+
+#SystemBar {
+    display:flex;
+    justify-content: space-around;
+    align-items: center;
+    background:#fff;
+}
+
+#Logo {
+    display:flex;
+    justify-content: center;
+}
+
+#Navigation {
+    height:7vh;
+    background:var(--color-primary-1);
+}
+
+#SystemBarNavigation {
+    background:var(--color-primary-1);
+}
+
+#Menu {
+    height:100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;    
+}
+
+#Main {
+    flex-grow:1;
+    display:flex;
+    flex-direction:column;
+}
+
+#Hero button {
+    background:transparent;
+    border:none;
+}
+
+.Hero-Content {
+    display: flex;
+    flex-direction:column;
+    align-items: center;
+    color:var(--color-primary-1);
+}
+
+/* HERO SLIDER IMAGES */
+
+#slide-1-image {
+    background: url("./static/archery-guyana-public.jpg");
+    background-size: cover;
+}
+
+#slide-3-image {
+    background: url("./static/archery-guyana-diverse-group-shooting-outdoor-sunny.jpg");
+    background-size: cover;
+}
+
+
+#slide-2-image {
+    background: url("./static/archery-guyana-friendly-officials.jpg");
+    background-size: cover;
+}
+
+#slide-4-image {
+    background: url("./static/archery-guyana-firing-squad.jpg");
+    background-size: cover;
+}
+
+#slide-5-image {
+    background: url("./static/archery-guyana-youngters.jpg");
+    background-size: cover;
+}
+
+#gallery-hero-image {
+    background: url("./static/archery-guyana-red-team-focussed.jpg");
+    background-size: cover;
+}
+
+#caution-sign {
+    background: url("./static/icons8-caution-96-white.png");
+    background-size: cover;
+}
+
+.featured-news-image {
+    background: url("./static/archery-guyana-group-hug-white.jpg");
+    background-size: cover;
+}
+
+#latest-news-1 {
+    background: url("./static/archery-guyana-massy-sponsorship.jpg");
+    background-size: cover;
+}
+
+#latest-news-2 {
+    background: url("./static/archery-guyana-svc-school-introducing-the-bow.jpg");
+    background-size: cover;
+}
+
+#latest-news-3 {
+    background: url("./static/archery-guyana-ix-copa-merengue-santo-domingo.jpg");
+    background-size: cover;
+}
+
+#LatestNews .featured {
+    background:var(--color-primary-1);
+}
+
+#LatestNews .featured .card-label-featured {
+    color:var(--color-primary-2);
+}
+
+#LatestNews .featured .featured-news-content {
+    display:flex;
+    flex-direction:column;
+    color:#fff;
+}
+
+#LatestNews .card .card-image {
+    position:relative;
+}
+
+#LatestNews .card .card-image .card-date {
+    position: absolute;
+    height:48px;
+    width:48px;
+    top:16px;
+    left:16px;
+    border-radius:8px;
+    display:flex;
+    flex-direction:column;
+    justify-content: center;
+    color:#fff;
+    background:var(--color-primary-1);
+}
+
+#LatestNews .card .card-image .card-date div {
+    display:flex;
+    justify-content: center;
+}
+
+#Announcement {
+    display:flex;
+    align-items: center;
+}
+
+#Schedule {
+    flex-grow:1;
+    background:var(--color-primary-1);
+}
+
+.table-viewport {
+    margin:0 1em;
+    border-radius:8px;
+    background:white;
+}
+
+#Footer {
+    background:var(--color-primary-1);
+    flex:1 0 40vh;
+}
+
+#Footer {
+    display:flex;
+    flex-direction:column;
+}
+
+#Footer-Content {
+    flex:1 0 90%;
+}
+
+#Copyright {
+    flex: 1 0 10%;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    color:#fff;
+}
+
+/* ***************
+
+MOBILE RESPONSIVE STYLES
+------------------------
+*****************/
+
+
+/****************
+SMALL DEVICES - MOBILE PHONES, SMALL TABLETS
+*****************/
+
+@media only screen and (max-width:600px) {
+    #Social-Links,
+    #Affiliations {display:none;}
+
+    #SystemBar {
+        height:12vh;
+    }
+
+    #SystemBar #Logo {
+        flex:1 1 50%;
+    }
+
+    #SystemBar .nav-label {
+        flex:1 1 50%;
+        display:flex;
+        justify-content: center;
+    }
+
+    #SystemBar img.logo {
+        height:20%;
+        width:20%;
+    }
+
+    #SystemBarNavigation {
+        z-index:750;
+        height: 100%;
+        width: 100%;
+        display: flex;
+        align-items: flex-start;
+        justify-content: center;
+        padding-top: 16px;
+        top: 12vh;
+        position: fixed;
+        right: -100vw;
+        transition: all 0.619s ease-in-out;
+    }
+
+    #SystemBarNavigation ul li {
+        display: block;
+        font-size:16pt;
+        padding:8px 0 8px 0;
+    }
+
+    #toggler {
+        position: absolute;
+        height: 25px;
+        width: 24px;
+    }
+
+    #toggler:checked ~ #SystemBarNavigation {
+        z-index: 900;
+        left:100%;
+        transform: translate(-100%, 0);        
+    }
+
+    #Menu {
+        width: 100%;
+        gap: 2em;
+    }
+
+    .hamburger {
+        width: 24px;
+        height: 24px;
+        position: relative;
+        display:flex;
+        flex-direction:column;
+    }
+
+    .hamburger .bar {
+        width: 24px;
+        height: 4px;
+        background-color: var(--color-primary-1);
+        display: block;
+        border-radius: 4px;
+        transition: all 0.4s ease-in-out;
+        position: absolute;
+    }
+
+    .bar1 {top: 0;}
+
+    .bar2,
+    .bar3 {
+        top: 8px;
+    }
+
+    .bar4 {top:16px;}
+
+    #toggler:checked+label>.hamburger1>.bar1 {
+        transform: rotate(45deg);
+        transform-origin: 5%;
+        width: 24px
+    }
+
+    #toggler:checked+label>.hamburger1>.bar2 {
+        transform: translateX(-24px);
+        background-color: transparent;
+    }
+
+    #toggler:checked+label>.hamburger1>.bar3 {
+        transform: translateX(24px);
+        background-color: transparent;
+    }
+
+    #toggler:checked+label>.hamburger1>.bar4 {
+        transform-origin: 5%;
+        transform: rotate(-45deg);
+        width: 24px;
+    }
+
+    #Gallery,
+    #Sponsors,
+    #Membership {display:none;}
+
+    #GalleryHero,
+    #Hero {
+        flex: 1 0 60vh;
+    }
+
+    #Hero {
+        position:relative;
+    }
+
+    .Hero-Content {
+        flex: 1 0 40%;
+    }
+    
+    .Hero-Image {
+        flex: 1 0 60%;
+    }
+
+    #Hero #slides-container {
+        height:100%;
+        width:100%;
+        display: flex;
+        overflow-x: scroll;
+        overscroll-behavior-x: contain;
+        scroll-behavior: smooth;
+        background:var(--color-primary-2);
+    }
+
+    #Hero .Hero-Slide {
+        height:100%;
+        min-width:100%;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        background:var(--color-primary-2);
+    }
+
+    #slide-5-image {
+        background-position: 30% 0;
+    }
+
+    .Hero-Image {
+        order: 1;
+    }
+
+    .Hero-Content {
+        order: 2;
+        z-index:700;
+    }
+
+    .Hero-Content {
+        justify-content:center;
+        padding: 0 1em;
+    }
+
+    .vertical-gradient {
+        position:absolute;
+        z-index:600;
+        height:100%;
+        width:100%;
+        background-image:
+            linear-gradient(
+                to top,                
+                rgba(11,244,10, 0.25),
+                rgba(11, 244, 10, 0.35),
+                rgba(11, 244, 10, 0.55),
+                rgba(11, 244, 10, 1),
+                rgba(255,241,9, 1),
+                rgba(255, 241, 9, 0.35),
+                rgba(255, 241, 9, 0.25),
+                rgba(255, 241, 9, 0.15),
+                rgba(255, 241, 9, 0.1)                
+            );
+    }
+
+    #Hero .slide-arrow {
+        height:48px;
+        width:48px;
+        position:absolute;
+        top:50%;
+        z-index:750;
+        cursor:pointer;
+    }
+
+    #Hero #slide-arrow-next {
+        right:0;
+    }
+
+    #Hero #slide-arrow-prev {
+        left: 0;
+    }
+
+    #Hero .slide-arrow img {
+        height:32px;
+        width:32px;
+    }
+
+    #Announcement {    
+        flex:1 1 10vh;
+        font-size: 9pt;
+        color:#fff;      
+        background:var(--color-primary-4);
+    }
+
+    #Announcement #caution-sign {
+        height:48px;
+        min-width:48px;
+    }
+
+    #Upcoming {
+        flex-grow:1;
+        color: #fff;
+        display: flex;
+        flex-direction:column;
+        background: var(--color-primary-1);
+    }
+
+    #Upcoming .upcoming-event-details {
+        padding:2em 0 1em 0;
+        display:flex;
+        flex-direction:column;
+        justify-content:center;
+        align-items: center;
+        gap:0.33em;
+    }
+
+    #Upcoming .upcoming-event-countdown-timer {
+        padding:1em 0 2em 0;
+        display:flex;
+        justify-content:space-around;
+    }
+
+    #Upcoming .upcoming-event-countdown-timer .countdown-card {
+        flex-grow:1;
+        flex-shrink:0;
+    }
+
+    .countdown-card-top,
+    .countdown-card-bottom {
+        display: flex;
+        justify-content: center;
+    }
+
+    .countdown-card-top {font-size:18pt;}
+
+    .Sponsors {
+        padding:4em 0 4em 0;
+        flex-grow:1;
+        display:flex;
+        flex-direction:column;
+        gap:2em;
+    }
+
+    .sponsor-logos {
+        display:flex;
+        flex-wrap: wrap;
+        display:flex;
+        justify-content:center;
+        column-gap: 1em;
+        row-gap: 2em;        
+    }
+
+    .sponsor-controls {
+        display:flex;
+        justify-content: center;
+    }
+
+    .sponsors-button {
+        justify-self:center;
+    }
+
+    .homepage-sponsor-logo-square {
+        height:100px;
+        width:100px;
+    }
+
+    .homepage-sponsor-logo-wide {
+        height:100px;
+    }
+
+    #Schedule {
+        padding:2em 0 4em 0;
+        display:flex;
+        flex-direction:column;
+        gap:1em;
+    }
+
+    .table-viewport {
+        padding:1em;
+    }
+
+    .section-header {
+        display:flex;
+        justify-content:center;
+    }
+
+    #Schedule {
+        background:#fff;
+    }
+
+    #Schedule table thead {
+        display:none;
+    }
+
+    #Schedule table td {
+        display:flex;
+    }
+
+    #Schedule table tbody {
+        display:flex;
+        flex-direction:column;        
+        gap:0.5em;
+    }
+
+    #Schedule table td::before {
+        content: attr(label);
+        font-weight:bold;
+        min-width:20%;
+        padding-left:0.3em;
+    }
+
+    a.table-button {
+        color:var(--color-primary-1);
+    }
+
+    #Schedule table td {
+        padding:0.3em 0;
+        background:#eee;
+        border-bottom:8px white;
+    }
+
+    td {
+        border-top:1px solid #fff;
+    }
+
+    .table-viewport-controls {
+        margin-top:1em;
+    }
+
+    #LatestNews {
+        padding:2em 0 4em 0;
+        display:flex;
+        flex-direction:column;
+        gap:3em;
+    }
+
+    #LatestNews .card {
+        margin:0 1em;
+        border-radius: 12px;
+    }
+
+    /* TODO: ADD BOX SHADOW TO MOBILE */
+    #LatestNews .card {
+        border: 1px solid;
+    }
+
+    #LatestNews .featured .featured-news-image {
+        min-height:300px;
+        background-position:52% 0;
+        border-radius: 12px 12px 0 0;
+    }
+
+    #LatestNews .card .card-content {
+        padding: 1em 1em 2em 1em;
+    }
+
+    #LatestNews .news-card .news-card-image {
+        height:25vh;
+        border-radius:12px;
+    }
+
+    #latest-news-1 {
+        background-position:0 50%;
+    }
+
+    #GalleryHero {
+        position:relative;
+        display:flex;
+        flex-direction:column;
+        background:var(--color-primary-2);
+    }
+
+    .gallery-hero-content,
+    .gallery-hero-image {
+        display:flex;
+
+    }
+
+    .gallery-hero-content  {
+        order:2;
+        flex:1 0 40%;
+        z-index: 700;
+        flex-direction:column;
+        justify-content: center;
+        align-items: center;
+        gap:1em;
+        padding:0 1em;
+    }
+
+    .gallery-hero-image {
+        order:1;
+        flex:1 0 60%;
+    }
+
+}
+
+/* *************
+TABLETS, LAPTOPS, DESKTOPS BELOW ULTRAWIDE
+****************/
+
+@media only screen and (min-width:600px) {
+    #SystemBarNavigation,
+    #toggler,
+    .nav-label {
+        display:none;
+    }
+
+    #Logo {flex: 1 1 50%;}
+    #Affiliations,
+    #Social-Links {
+        flex: 1 1 25%;
+        display:flex;
+    }
+
+    #SystemBar img.logo {
+        height:10%;
+        width:10%;
+    }
+
+    #Affiliations {
+        justify-content:flex-end;
+    }
+
+    #Social-Links {
+        justify-content: flex-start;
+    }
+
+
+
+}
+
+/*****************
+EDGE CASE - LANDSCAPE MOBILE PHONES
+*****************/
+
+@media only screen and (min-height:300px) {
+
+}
