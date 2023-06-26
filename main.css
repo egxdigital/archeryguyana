@@ -8,7 +8,6 @@
     display:flex;
     justify-content: space-around;
     align-items: center;
-    background:#fff;
 }
 
 #Logo {
@@ -18,11 +17,6 @@
 
 #Navigation {
     height:7vh;
-    background:var(--color-primary-1);
-}
-
-#SystemBarNavigation {
-    background:var(--color-primary-1);
 }
 
 #Menu {
@@ -48,7 +42,6 @@
     display: flex;
     flex-direction:column;
     align-items: center;
-    color:var(--color-primary-1);
 }
 
 /* HERO SLIDER IMAGES */
@@ -58,14 +51,14 @@
     background-size: cover;
 }
 
-#slide-3-image {
-    background: url("./static/archery-guyana-diverse-group-shooting-outdoor-sunny.jpg");
-    background-size: cover;
-}
-
 
 #slide-2-image {
     background: url("./static/archery-guyana-friendly-officials.jpg");
+    background-size: cover;
+}
+
+#slide-3-image {
+    background: url("./static/archery-guyana-men-indoor-winners.jpg");
     background-size: cover;
 }
 
@@ -76,6 +69,11 @@
 
 #slide-5-image {
     background: url("./static/archery-guyana-youngters.jpg");
+    background-size: cover;
+}
+
+#slide-6-image {
+    background: url("./static/archery-guyana-bows-up.jpg");
     background-size: cover;
 }
 
@@ -109,18 +107,9 @@
     background-size: cover;
 }
 
-#LatestNews .featured {
-    background:var(--color-primary-1);
-}
-
-#LatestNews .featured .card-label-featured {
-    color:var(--color-primary-2);
-}
-
 #LatestNews .featured .featured-news-content {
     display:flex;
     flex-direction:column;
-    color:#fff;
 }
 
 #LatestNews .card .card-image {
@@ -137,8 +126,6 @@
     display:flex;
     flex-direction:column;
     justify-content: center;
-    color:#fff;
-    background:var(--color-primary-1);
 }
 
 #LatestNews .card .card-image .card-date div {
@@ -153,18 +140,15 @@
 
 #Schedule {
     flex-grow:1;
-    background:var(--color-primary-1);
 }
 
 .table-viewport {
     margin:0 1em;
     border-radius:8px;
-    background:white;
 }
 
 #Footer {
-    background:var(--color-primary-1);
-    flex:1 0 40vh;
+    flex:1;
 }
 
 #Footer {
@@ -176,12 +160,16 @@
     flex:1 0 90%;
 }
 
+#Footer .footer-category-links li img {
+    height:24px;
+    width:24px;
+}
+
 #Copyright {
     flex: 1 0 10%;
     display:flex;
     justify-content: center;
     align-items: center;
-    color:#fff;
 }
 
 /* ***************
@@ -222,14 +210,18 @@ SMALL DEVICES - MOBILE PHONES, SMALL TABLETS
         z-index:750;
         height: 100%;
         width: 100%;
-        display: flex;
-        align-items: flex-start;
-        justify-content: center;
-        padding-top: 16px;
         top: 12vh;
         position: fixed;
         right: -100vw;
+        display: flex;
+        flex-direction:column;
+        align-items: flex-start;
+        justify-content: flex-start;
         transition: all 0.619s ease-in-out;
+    }
+
+    #SystemBarNavigation ul {
+        padding:2em 0em 0em 4em;
     }
 
     #SystemBarNavigation ul li {
@@ -238,17 +230,46 @@ SMALL DEVICES - MOBILE PHONES, SMALL TABLETS
         padding:8px 0 8px 0;
     }
 
+    #SystemBarNavigation .icon-links {
+        display:flex;
+        gap:0.7em;
+    }
+
+    #SystemBarNavigation .icon-links li a {
+        display:flex;
+        justify-content:center;
+        align-items:center;
+        height:48px;
+        width:48px;
+        border-radius:50%;
+    }
+
+    #SystemBarNavigation .icon-links li a img {
+        height:36px;
+        width:36px;
+    }
+
     #toggler {
         position: absolute;
         height: 25px;
         width: 24px;
     }
-
+    
     #toggler:checked ~ #SystemBarNavigation {
         z-index: 900;
-        left:100%;
-        transform: translate(-100%, 0);        
+        left:100vw;
+        transform: translate(-100%, 0);
     }
+
+    #toggler:checked ~ #SystemBar {
+        position:fixed;
+    }
+
+    .stop-scrolling {
+        height: 100%;
+        overflow: hidden;
+    }
+
 
     #Menu {
         width: 100%;
@@ -266,7 +287,6 @@ SMALL DEVICES - MOBILE PHONES, SMALL TABLETS
     .hamburger .bar {
         width: 24px;
         height: 4px;
-        background-color: var(--color-primary-1);
         display: block;
         border-radius: 4px;
         transition: all 0.4s ease-in-out;
@@ -282,31 +302,31 @@ SMALL DEVICES - MOBILE PHONES, SMALL TABLETS
 
     .bar4 {top:16px;}
 
-    #toggler:checked+label>.hamburger1>.bar1 {
+    #toggler:checked+label>.hamburger>.bar1 {
         transform: rotate(45deg);
         transform-origin: 5%;
         width: 24px
     }
 
-    #toggler:checked+label>.hamburger1>.bar2 {
+    #toggler:checked+label>.hamburger>.bar2 {
         transform: translateX(-24px);
         background-color: transparent;
     }
 
-    #toggler:checked+label>.hamburger1>.bar3 {
+    #toggler:checked+label>.hamburger>.bar3 {
         transform: translateX(24px);
         background-color: transparent;
     }
 
-    #toggler:checked+label>.hamburger1>.bar4 {
+    #toggler:checked+label>.hamburger>.bar4 {
         transform-origin: 5%;
         transform: rotate(-45deg);
         width: 24px;
     }
 
-    #Gallery,
-    #Sponsors,
-    #Membership {display:none;}
+    #Gallery-Menu,
+    #Sponsors-Menu,
+    #Membership-Menu {display:none;}
 
     #GalleryHero,
     #Hero {
@@ -319,6 +339,11 @@ SMALL DEVICES - MOBILE PHONES, SMALL TABLETS
 
     .Hero-Content {
         flex: 1 0 40%;
+        overflow-y:hidden;
+    }
+
+    .Hero-Content span {
+        text-align:center;
     }
     
     .Hero-Image {
@@ -332,7 +357,7 @@ SMALL DEVICES - MOBILE PHONES, SMALL TABLETS
         overflow-x: scroll;
         overscroll-behavior-x: contain;
         scroll-behavior: smooth;
-        background:var(--color-primary-2);
+        scroll-snap-type: x mandatory;
     }
 
     #Hero .Hero-Slide {
@@ -341,11 +366,19 @@ SMALL DEVICES - MOBILE PHONES, SMALL TABLETS
         position: relative;
         display: flex;
         flex-direction: column;
-        background:var(--color-primary-2);
+        scroll-snap-align: center;
     }
 
     #slide-5-image {
         background-position: 30% 0;
+    }
+
+    #slide-3-image {
+        background-position:65% 0;
+    }
+
+    #slide-6-image {
+        background-position: 0 30%;
     }
 
     .Hero-Image {
@@ -362,53 +395,35 @@ SMALL DEVICES - MOBILE PHONES, SMALL TABLETS
         padding: 0 1em;
     }
 
-    .vertical-gradient {
-        position:absolute;
-        z-index:600;
-        height:100%;
-        width:100%;
-        background-image:
-            linear-gradient(
-                to top,                
-                rgba(11,244,10, 0.25),
-                rgba(11, 244, 10, 0.35),
-                rgba(11, 244, 10, 0.55),
-                rgba(11, 244, 10, 1),
-                rgba(255,241,9, 1),
-                rgba(255, 241, 9, 0.35),
-                rgba(255, 241, 9, 0.25),
-                rgba(255, 241, 9, 0.15),
-                rgba(255, 241, 9, 0.1)                
-            );
-    }
-
     #Hero .slide-arrow {
-        height:48px;
-        width:48px;
+        height:32px;
+        width:32px;
         position:absolute;
         top:50%;
         z-index:750;
         cursor:pointer;
+        display:flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 50%;        
     }
 
     #Hero #slide-arrow-next {
-        right:0;
+        right:8px;
     }
 
     #Hero #slide-arrow-prev {
-        left: 0;
+        left: 8px;
     }
 
     #Hero .slide-arrow img {
-        height:32px;
-        width:32px;
+        height:24px;
+        width:24px;
     }
 
     #Announcement {    
         flex:1 1 10vh;
         font-size: 9pt;
-        color:#fff;      
-        background:var(--color-primary-4);
     }
 
     #Announcement #caution-sign {
@@ -418,10 +433,8 @@ SMALL DEVICES - MOBILE PHONES, SMALL TABLETS
 
     #Upcoming {
         flex-grow:1;
-        color: #fff;
         display: flex;
         flex-direction:column;
-        background: var(--color-primary-1);
     }
 
     #Upcoming .upcoming-event-details {
@@ -503,10 +516,6 @@ SMALL DEVICES - MOBILE PHONES, SMALL TABLETS
         justify-content:center;
     }
 
-    #Schedule {
-        background:#fff;
-    }
-
     #Schedule table thead {
         display:none;
     }
@@ -528,22 +537,17 @@ SMALL DEVICES - MOBILE PHONES, SMALL TABLETS
         padding-left:0.3em;
     }
 
-    a.table-button {
-        color:var(--color-primary-1);
-    }
-
     #Schedule table td {
         padding:0.3em 0;
-        background:#eee;
-        border-bottom:8px white;
-    }
-
-    td {
-        border-top:1px solid #fff;
     }
 
     .table-viewport-controls {
         margin-top:1em;
+        display:flex;
+        justify-content:center;
+        flex-wrap:wrap;
+        gap:0.5em;
+        
     }
 
     #LatestNews {
@@ -586,7 +590,6 @@ SMALL DEVICES - MOBILE PHONES, SMALL TABLETS
         position:relative;
         display:flex;
         flex-direction:column;
-        background:var(--color-primary-2);
     }
 
     .gallery-hero-content,
@@ -609,6 +612,30 @@ SMALL DEVICES - MOBILE PHONES, SMALL TABLETS
     .gallery-hero-image {
         order:1;
         flex:1 0 60%;
+    }
+
+    .footer-category,
+    .footer-category-links {
+        display:flex;
+        flex-direction:column;
+    }
+
+    #Footer-Content {
+        padding:2em 1em;
+    }
+
+    #Footer .footer-category-links li {
+        padding:0.15em 0;
+    }
+
+    #Footer #contact-links li {
+        display:flex;        
+        align-items:center;
+        gap:0.7em;
+    }
+
+    .footer-category-label {
+        margin-top:0.33em;
     }
 
 }

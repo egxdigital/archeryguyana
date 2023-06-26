@@ -1,10 +1,18 @@
 :root {
-    --color-primary-1:#4157AC;
+    --color-primary-1:#4157ac;
     --color-primary-2:#0BF40A;
     --color-primary-3:#fff109;
     --color-primary-4:#DF2733;
+    --color-primary-1-rgb:rgb(65,87,172);
     --color-primary-2-rgb:rgb(11,244,10);
     --color-primary-3-rgb:rgb(255,241,9);
+    --color-bg-light:#fff;
+    --color-text-light:#fff;
+    --color-text-dark:rgba(0,0,0, 0.67);
+    --color-table-cell:#eee;
+    --padding-button-wide:0.5em 1.5em;
+    --padding-button-short: 0.5em 1em;
+    --border-radius-button:8px;
 }
 
 html {
@@ -39,7 +47,7 @@ ul {
 }
 
 ul li a {
-    color: #fff;
+    color: var(--color-text-light);
     text-decoration: none;
 }
 
@@ -47,8 +55,11 @@ li {
     display: inline-block;
 }
 
+a {
+    cursor: pointer;
+}
+
 a:visited {
-    color:white;
     text-decoration:none;
 }
 
@@ -58,14 +69,14 @@ a:visited {
 
 .visually-hidden {
     position: absolute;
-    right: 0;
-    overflow: hidden;
     clip: rect(0 0 0 0);
+    right: 0;    
     height: 1px;
     width: 1px;
     margin: -1px;
     padding: 0;
     border: 0;
+    overflow: hidden;
 }
 
 .flipped {
@@ -73,7 +84,172 @@ a:visited {
     transform: scaleX(-1);
 }
 
-/* Buttons */
+/* Components */
+.hero-button,
+#upcoming-event-registration-button,
+.sponsors-button,
+.schedule-button,
+.card,
+.gallery-hero-button {
+    text-decoration: none;
+}
 
+#SystemBarNavigation .sidenav-links li a,
+.Hero-Content,
+.hero-button,
+.section-header,
+.table-button,
+.news-card-title,
+#gallery-hero-shout,
+#gallery-hero-verbose {
+    color:var(--color-primary-1);
+}
+
+#Menu li a,
+.announcement-message,
+.announcement-read-more,
+.upcoming-event-title,
+.upcoming-event-venue,
+.upcoming-event-date,
+.upcoming-event-time,
+.countdown-card,
+#LatestNews .featured .featured-news-content,
+#LatestNews .card .card-image .card-date,
+.footer-category-label,
+#Copyright {
+    color:var(--color-text-light);
+}
+
+.news-card-excerpt {
+    color:var(--color-text-dark);
+}
+
+.upcoming-section-header {
+    color:var(--color-primary-2);
+}
+
+#SystemBar,
+#SystemBarNavigation,
+#SystemBarNavigation .icon-links li a,
+#Schedule,
+.table-viewport {
+    background: var(--color-bg-light);
+}
+
+#Schedule table td {
+    background: var(--color-table-cell);
+}
+
+#Announcement {
+    background: var(--color-primary-4);
+}
+
+.hamburger .bar,
+#Navigation,
+#Hero .slide-arrow,
+#Upcoming,
+#Schedule,
+#LatestNews .featured,
+#LatestNews .card .card-image .card-date,
+#Footer {
+    background: var(--color-primary-1);
+}
+
+
+#Hero #slides-container,
+#Hero .Hero-Slide,
+#GalleryHero {
+    background: var(--color-primary-2);
+}
+
+#LatestNews .featured .card-label-featured {
+    color: var(--color-primary-2);
+}
+
+#Hero .slide-arrow {
+    opacity: 80%;
+}
+
+#Hero .slide-arrow {
+    box-shadow: 0px 0px 8px 4px rgba(65, 87, 172, 0.33);
+}
+
+#SystemBarNavigation .icon-link {
+    box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.5)
+}
+
+td {
+    border-top: 1px solid var(--color-bg-light);
+}
+
+#Schedule table td {
+    border-bottom: 8px var(--color-bg-light);
+}
+
+.vertical-gradient {
+    position: absolute;
+    z-index: 600;
+    height: 100%;
+    width: 100%;
+    background-image:
+        linear-gradient(to top,
+            rgba(11, 244, 10, 0.25),
+            rgba(11, 244, 10, 0.35),
+            rgba(11, 244, 10, 0.55),
+            rgba(11, 244, 10, 1),
+            rgba(255, 241, 9, 1),
+            rgba(255, 241, 9, 0.35),
+            rgba(255, 241, 9, 0.25),
+            rgba(255, 241, 9, 0.15),
+            rgba(255, 241, 9, 0.1));
+}
+
+@media only screen and (max-width:600px) {
+    #Schedule {
+        background:var(--color-bg-light);
+    }
+}
+
+
+/* Buttons */
+.membership-button {
+    color:var(--color-primary-1);
+    background:var(--color-primary-2);
+}
+
+#event-calendar-button {
+    padding: var(--padding-button-wide);
+    border-radius: var(--border-radius-button);
+    border: 3px solid var(--color-text-light);
+}
+
+
+#upcoming-event-registration-button {
+    padding: var(--padding-button-wide);
+    border-radius: var(--border-radius-button);
+    border: 3px solid var(--color-text-light);
+    color:var(--color-text-light);    
+}
+
+.sponsors-button,
+.schedule-button {
+    padding:var(--padding-button-wide);
+    border-radius:var(--border-radius-button);
+    color:var(--color-text-light);
+    background:var(--color-primary-1);
+}
+
+.table-button {
+    text-decoration: underline;
+    text-decoration-thickness: 2px;
+    text-decoration-color:var(--color-primary-1);
+}
+
+.gallery-hero-button {
+    padding: var(--padding-button-short);
+    border-radius: var(--border-radius-button);
+    color: var(--color-text-light);
+    background: var(--color-primary-1);
+}
 
 /* Typography */
