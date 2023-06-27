@@ -10,7 +10,7 @@
     --color-text-light:#fff;
     --color-text-dark:rgba(0,0,0, 0.67);
     --color-table-cell:#eee;
-    --padding-button-wide:0.5em 1.5em;
+    --padding-button-wide:0.5em 1em;
     --padding-button-short: 0.5em 1em;
     --border-radius-button:8px;
 }
@@ -186,6 +186,11 @@ td {
     border-bottom: 8px var(--color-bg-light);
 }
 
+#LatestNews .featured .featured-news-image,
+#LatestNews .news-card .news-card-image {
+    border-radius: 12px;
+}
+
 .vertical-gradient {
     position: absolute;
     z-index: 600;
@@ -202,12 +207,6 @@ td {
             rgba(255, 241, 9, 0.25),
             rgba(255, 241, 9, 0.15),
             rgba(255, 241, 9, 0.1));
-}
-
-@media only screen and (max-width:600px) {
-    #Schedule {
-        background:var(--color-bg-light);
-    }
 }
 
 
@@ -253,3 +252,19 @@ td {
 }
 
 /* Typography */
+
+@media only screen and (max-width:600px) {
+    #Schedule {
+        background: var(--color-bg-light);
+    }
+
+    #LatestNews .card {
+        border-radius:12px;
+        box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.5)
+    }
+
+    #LatestNews .featured .featured-news-image,    
+    #LatestNews .news-card .news-card-image {
+        border-radius: 12px 12px 0 0;
+    }
+}
