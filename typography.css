@@ -1,0 +1,136 @@
+/*
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@1,900&family=Roboto&display=swap');
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,400;1,900&family=Roboto:wght@400;700;900&display=swap');
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+.display {
+    font-family: 'Noto Sans', sans-serif;
+    font-size: 50.2px;
+    line-height: 48px;
+    font-weight:900;
+    font-style: italic;
+}
+
+.regular {
+    font-weight:400;
+}
+
+.bold {
+    font-weight: 700;
+}
+
+.bolder {
+    font-weight: 900;
+}
+
+.italic,
+.card-day,
+.news-card-title {
+    font-style: italic;
+}
+
+.uppercase {
+    text-transform: uppercase;
+}
+
+.capitalize {
+    text-transform: capitalize;
+}
+
+.underline,
+.footer-category-label {
+    text-decoration: underline;
+    text-decoration-thickness: 2px;
+}
+
+.h1 {
+    font-size:41.8px;
+    line-height: 56px;
+}
+
+.h4 {
+    font-size: 24.2px;
+    line-height: 32px;
+}
+
+.h5 {
+    font-size: 20.2px;
+    line-height: 32px;
+}
+
+.h5-label,
+.featured-card-title {
+    font-size: 20.2px;
+    line-height: auto;
+    font-weight:700;
+    font-style: italic;
+}
+
+.p1,
+.featured-card-excerpt,
+.news-card-excerpt {
+    font-size:16px;
+    line-height: 20px;
+}
+
+.label-bold {
+    font-size: 16.8px;
+    line-height: 16px;
+    font-weight: 700;
+}
+
+.label-1-bold,
+.hero-button {
+    font-size:16.8px;
+    line-height: 16px;
+    font-weight:700;
+    text-transform: uppercase;
+}
+
+.label-2-bold,
+.card-date,
+.news-card-title,
+.gallery-hero-button {
+    font-size: 14px;
+    line-height: 14px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+
+#Schedule table td::before {
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+#Schedule table .table-button {
+    text-transform: uppercase;
+}
+
+.announcement-message {text-align:center;}
+
+@media only screen and (max-width:600px) {
+    .display {
+        font-size: calc(50.2px/1.2/1.2);
+        font-weight: 900;
+    }
+
+    .h1 {
+        font-size:calc(50.2px/1.2/1.2);
+    }
+
+    /*
+
+    .h4 {
+        font-size: calc(24.2px/1.2/1.2);
+    }
+    */
+
+    .h5 {
+        font-size:calc(20.2px/1.2/1.2);
+    }    
+}

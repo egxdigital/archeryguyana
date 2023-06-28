@@ -129,11 +129,16 @@
 }
 
 #LatestNews .card .card-image .card-date div {
+    text-align: center;
+}
+
+#LatestNews .card .card-image .card-date div {
     display:flex;
     justify-content: center;
 }
 
 #Announcement {
+    padding:1.67em 0;
     display:flex;
     align-items: center;
 }
@@ -188,7 +193,7 @@ SMALL DEVICES - MOBILE PHONES, SMALL TABLETS
     #Affiliations {display:none;}
 
     #SystemBar {
-        height:12vh;
+        height:10vh;
     }
 
     #SystemBar #Logo {
@@ -210,29 +215,34 @@ SMALL DEVICES - MOBILE PHONES, SMALL TABLETS
         z-index:750;
         height: 100%;
         width: 100%;
-        top: 12vh;
         position: fixed;
+        top: 10vh; /* EQUAL TO HEIGHT OF #SystemBar */        
         right: -100vw;
         display: flex;
         flex-direction:column;
-        align-items: flex-start;
-        justify-content: flex-start;
+        gap:2em;
         transition: all 0.619s ease-in-out;
     }
 
     #SystemBarNavigation ul {
-        padding:2em 0em 0em 4em;
+        display:block;
     }
 
-    #SystemBarNavigation ul li {
-        display: block;
-        font-size:16pt;
-        padding:8px 0 8px 0;
+    #SystemBarNavigation ul li a {
+        display:inline-block;
+    }
+
+    #SystemBarNavigation .sidenav-menu-links {
+        display:flex;
+        flex-direction:column;
+        gap:1.2em;
+        padding: 3em 3em 0 3em;
     }
 
     #SystemBarNavigation .icon-links {
         display:flex;
-        gap:0.7em;
+        gap:0.67em;
+        padding-left:3em;
     }
 
     #SystemBarNavigation .icon-links li a {
@@ -330,7 +340,7 @@ SMALL DEVICES - MOBILE PHONES, SMALL TABLETS
 
     #GalleryHero,
     #Hero {
-        flex: 1 0 60vh;
+        flex:1 0 70vh;
     }
 
     #Hero {
@@ -338,7 +348,8 @@ SMALL DEVICES - MOBILE PHONES, SMALL TABLETS
     }
 
     .Hero-Content {
-        flex: 1 0 40%;
+        flex: 1 0 50%;
+        justify-content:flex-start;
         overflow-y:hidden;
     }
 
@@ -347,7 +358,7 @@ SMALL DEVICES - MOBILE PHONES, SMALL TABLETS
     }
     
     .Hero-Image {
-        flex: 1 0 60%;
+        flex: 1 0 50%;
     }
 
     #Hero #slides-container {
@@ -421,14 +432,21 @@ SMALL DEVICES - MOBILE PHONES, SMALL TABLETS
         width:24px;
     }
 
+    #Hero .verbose {
+        padding:1em 0;
+    }
+
     #Announcement {    
         flex:1 1 10vh;
-        font-size: 9pt;
     }
 
     #Announcement #caution-sign {
         height:48px;
         min-width:48px;
+    }
+
+    #Announcement .announcement-message {
+        padding-right:48px;
     }
 
     #Upcoming {
@@ -444,6 +462,10 @@ SMALL DEVICES - MOBILE PHONES, SMALL TABLETS
         justify-content:center;
         align-items: center;
         gap:0.33em;
+    }
+
+    #upcoming-event-registration-button {
+        margin:1em 0;
     }
 
     #Upcoming .upcoming-event-countdown-timer {
@@ -509,6 +531,9 @@ SMALL DEVICES - MOBILE PHONES, SMALL TABLETS
 
     .table-viewport {
         padding:1em;
+        display: flex;
+        flex-direction:column;
+        justify-content: center;
     }
 
     .section-header {
@@ -527,27 +552,25 @@ SMALL DEVICES - MOBILE PHONES, SMALL TABLETS
     #Schedule table tbody {
         display:flex;
         flex-direction:column;        
-        gap:0.5em;
+        gap:1em;
     }
 
     #Schedule table td::before {
         content: attr(label);
-        font-weight:bold;
         min-width:20%;
         padding-left:0.3em;
     }
 
     #Schedule table td {
-        padding:0.3em 0;
+        padding:0.47em 0;
     }
 
     .table-viewport-controls {
-        margin-top:1em;
+        margin-top:2em;
         display:flex;
         justify-content:center;
-        flex-wrap:wrap;
-        gap:0.5em;
-        
+        flex-wrap:wrap;        
+        gap:1em;
     }
 
     #LatestNews {
@@ -592,7 +615,7 @@ SMALL DEVICES - MOBILE PHONES, SMALL TABLETS
 
     .gallery-hero-content  {
         order:2;
-        flex:1 0 40%;
+        flex:1 0 50%;
         z-index: 700;
         flex-direction:column;
         justify-content: center;
@@ -603,7 +626,14 @@ SMALL DEVICES - MOBILE PHONES, SMALL TABLETS
 
     .gallery-hero-image {
         order:1;
-        flex:1 0 60%;
+        flex:1 0 50%;
+    }
+
+    .gallery-hero-controls {
+        display:flex;
+        justify-content:center;
+        flex-wrap: wrap;
+        gap:1em;
     }
 
     .footer-category,
@@ -617,17 +647,23 @@ SMALL DEVICES - MOBILE PHONES, SMALL TABLETS
     }
 
     #Footer .footer-category-links li {
-        padding:0.15em 0;
+        padding-top:0.7em;
     }
 
     #Footer #contact-links li {
         display:flex;        
         align-items:center;
-        gap:0.7em;
+        padding-top:0.3em;
+        gap:0.5em;
     }
 
     .footer-category-label {
-        margin-top:0.33em;
+        margin-top:0.5em;
+    }
+
+    #Copyright {
+        padding:1em 0;
+        border-top:2px solid #fff;
     }
 
 }
@@ -671,6 +707,8 @@ TABLETS, LAPTOPS, DESKTOPS BELOW ULTRAWIDE
 EDGE CASE - LANDSCAPE MOBILE PHONES
 *****************/
 
-@media only screen and (min-height:300px) {
-
+@media only screen and (max-height:700px) {
+    #Hero {
+        flex:1 0 80vh;
+    }
 }
