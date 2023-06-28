@@ -132,5 +132,9 @@ body {
 
     .h5 {
         font-size:calc(20.2px/1.2/1.2);
-    }    
+    }
+    
+    .p1 {
+        text-align:center;
+    }
 }
