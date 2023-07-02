@@ -194,20 +194,20 @@
                 <a id="upcoming-event-registration-button" class="button uppercase bold" href="#">Register Now</a>
             </div>
             <div class="upcoming-event-countdown-timer">
-                <div class="countdown-card" id="days">
-                    <div class="countdown-card-top h4 bolder">24</div>
+                <div class="countdown-card">
+                    <div  id="days" class="countdown-card-top h4 bolder"></div>
                     <div class="countdown-card-bottom label-2-bold">Days</div>
                 </div>
-                <div class="countdown-card" id="hours">
-                    <div class="countdown-card-top h4 bolder">32</div>
+                <div class="countdown-card">
+                    <div id="hours" class="countdown-card-top h4 bolder"></div>
                     <div class="countdown-card-bottom label-2-bold">Hours</div>
                 </div>
-                <div class="countdown-card" id="minutes">
-                    <div class="countdown-card-top h4 bolder">18</div>
+                <div class="countdown-card">
+                    <div id="minutes" class="countdown-card-top h4 bolder">18</div>
                     <div class="countdown-card-bottom label-2-bold">Minutes</div>
                 </div>
-                <div class="countdown-card" id="seconds">
-                    <div class="countdown-card-top h4 bolder">09</div>
+                <div class="countdown-card">
+                    <div id="seconds" class="countdown-card-top h4 bolder">09</div>
                     <div class="countdown-card-bottom label-2-bold">Seconds</div>
                 </div>
             </div>
@@ -447,7 +447,36 @@
             } else {
                 document.body.classList.remove("stop-scrolling")
             }
-        });        
+        });
+        // Set the date we're counting down to
+        let countDownDate = new Date("Nov 11, 2023 15:00:00").getTime();
+        
+        let x = setInterval(function () {
+
+        // Get today's date and time
+        let now = new Date().getTime();
+
+        // Find the distance between now and the count down date
+        let distance = countDownDate - now;
+
+        // Time calculations for days, hours, minutes and seconds
+        let days = Math.floor(distance / (1000 * 60 * 60 * 24));
+        let hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        let minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+        let seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+        // Output the result in an element with id="demo"
+        document.getElementById("days").innerHTML = days;
+        document.getElementById("hours").innerHTML = hours;
+        document.getElementById("minutes").innerHTML = minutes;
+        document.getElementById("seconds").innerHTML = seconds;
+
+        // If the count down is over, write some text 
+        if (distance < 0) {
+            clearInterval(x);
+            document.getElementById("demo").innerHTML = "EXPIRED";
+        }
+        }, 1000);
         
     </script>
 </body>

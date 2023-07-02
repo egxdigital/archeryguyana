@@ -410,14 +410,17 @@ SMALL DEVICES - MOBILE PHONES, SMALL TABLETS
     }
 
     #Upcoming .upcoming-event-countdown-timer .countdown-card {
-        flex-grow:1;
-        flex-shrink:0;
+        width:64px;
+        height:64px;
+        display: flex;
+        flex-direction:column;
+        justify-content: center;
+        align-items: center;
     }
 
     .countdown-card-top,
     .countdown-card-bottom {
-        display: flex;
-        justify-content: center;
+        text-align: center;
     }
 
     .countdown-card-top {font-size:18pt;}
