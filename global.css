@@ -37,10 +37,6 @@ html {
     scroll-behavior: smooth;
 }
 
-body {
-    overflow:overlay;
-}
-
 label {
     padding: 0;
 }

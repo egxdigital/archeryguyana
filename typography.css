@@ -110,9 +110,10 @@ body {
 
 .announcement-message {text-align:center;}
 
+
 @media only screen and (max-width:600px) {
     .display {
-        font-size: calc(50.2px/1.2/1.2);
+        font-size: calc(50.2px/1.2/1.2/1.2);
         font-weight: 900;
     }
 
@@ -121,14 +122,13 @@ body {
     }
 
     /*
-
     .h4 {
         font-size: calc(24.2px/1.2/1.2);
     }
     */
 
     .h5 {
-        font-size:calc(20.2px/1.2/1.2);
+        font-size:calc(20.2px/1.2);
     }
     
     .p1 {

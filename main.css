@@ -975,11 +975,13 @@ TABLETS, LAPTOPS, DESKTOPS BELOW ULTRAWIDE
     #LatestNews .card {
         display: grid;
         grid-template-rows: 300px min-content;
+        grid-gap:1em;
     }
 
     #LatestNews .card .card-content {
         display:flex;
         flex-direction:column;
+        padding:0 1em;
     }
 
     #LatestNews .featured {
