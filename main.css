@@ -4,19 +4,9 @@
     justify-content: space-between;
 }
 
-#SystemBar {
-    display:flex;
-    justify-content: space-around;
-    align-items: center;
-}
-
 #Logo {
     display:flex;
     justify-content: center;
-}
-
-#Navigation {
-    height:7vh;
 }
 
 #Menu {
@@ -24,7 +14,8 @@
     display: flex;
     flex-direction: row;
     justify-content: center;
-    align-items: center;    
+    align-items: center;  
+    gap:1em;
 }
 
 #Main {
@@ -33,83 +24,36 @@
     flex-direction:column;
 }
 
+#Hero {
+    grid-column:1/2;
+    grid-row:1/2;
+}
+
+#Hero #slides-container {
+    position:relative;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    overflow-x: scroll;
+    overscroll-behavior-x: contain;
+    scroll-behavior: smooth;
+    scroll-snap-type: x mandatory;
+}
+
+#Hero #slides-container::-webkit-scrollbar {
+    display:none;
+}
+
+#Hero .Hero-Slide {
+    height: 100%;
+    min-width: 100%;
+    position: relative;
+    scroll-snap-align:center;
+}
+
 #Hero button {
     background:transparent;
     border:none;
-}
-
-.Hero-Content {
-    display: flex;
-    flex-direction:column;
-    align-items: center;
-}
-
-/* HERO SLIDER IMAGES */
-
-#slide-1-image {
-    background: url("./static/archery-guyana-public.jpg");
-    background-size: cover;
-}
-
-
-#slide-2-image {
-    background: url("./static/archery-guyana-friendly-officials.jpg");
-    background-size: cover;
-}
-
-#slide-3-image {
-    background: url("./static/archery-guyana-men-indoor-winners.jpg");
-    background-size: cover;
-}
-
-#slide-4-image {
-    background: url("./static/archery-guyana-firing-squad.jpg");
-    background-size: cover;
-}
-
-#slide-5-image {
-    background: url("./static/archery-guyana-youngters.jpg");
-    background-size: cover;
-}
-
-#slide-6-image {
-    background: url("./static/archery-guyana-bows-up.jpg");
-    background-size: cover;
-}
-
-#gallery-hero-image {
-    background: url("./static/archery-guyana-red-team-focussed.jpg");
-    background-size: cover;
-}
-
-#caution-sign {
-    background: url("./static/icons8-caution-96-white.png");
-    background-size: cover;
-}
-
-.featured-news-image {
-    background: url("./static/archery-guyana-group-hug-white.jpg");
-    background-size: cover;
-}
-
-#latest-news-1 {
-    background: url("./static/archery-guyana-massy-sponsorship.jpg");
-    background-size: cover;
-}
-
-#latest-news-2 {
-    background: url("./static/archery-guyana-svc-school-introducing-the-bow.jpg");
-    background-size: cover;
-}
-
-#latest-news-3 {
-    background: url("./static/archery-guyana-ix-copa-merengue-santo-domingo.jpg");
-    background-size: cover;
-}
-
-#LatestNews .featured .featured-news-content {
-    display:flex;
-    flex-direction:column;
 }
 
 #LatestNews .card .card-image {
@@ -137,18 +81,11 @@
     justify-content: center;
 }
 
-#Announcement {
-    padding:1.67em 0;
-    display:flex;
-    align-items: center;
-}
-
 #Schedule {
     flex-grow:1;
 }
 
-.table-viewport {
-    margin:0 1em;
+#Schedule .table-viewport {
     border-radius:8px;
 }
 
@@ -183,32 +120,44 @@ MOBILE RESPONSIVE STYLES
 ------------------------
 *****************/
 
-
 /****************
 SMALL DEVICES - MOBILE PHONES, SMALL TABLETS
 *****************/
 
 @media only screen and (max-width:600px) {
+    :root {
+        --system-bar-height:10vh;
+        --slider-arrow-edge-distance:8px;
+    }
     #Social-Links,
-    #Affiliations {display:none;}
+    #Affiliations,
+    .carousel-navigation-list {display:none;}
 
+    #SystemBar {height:var(--system-bar-height);}
+    #Navigation {height: 7vh;}
+    #Hero {height: 70vh;}
+    #Announcement {height: 15vh;}
+    #Upcoming {height: 50vh;}
+    
     #SystemBar {
-        height:10vh;
+        display: grid;
+        grid-template-columns:2em 1fr 3fr 1fr 2em;
     }
 
-    #SystemBar #Logo {
-        flex:1 1 50%;
-    }
+    #Logo {grid-column:2/3;}
+    .nav-label {grid-column:4/5;}
 
-    #SystemBar .nav-label {
-        flex:1 1 50%;
+    #Logo {justify-content:left;align-items:center;}
+
+    .nav-label {
         display:flex;
-        justify-content: center;
+        justify-content: flex-end;
+        align-items:center;
     }
-
-    #SystemBar img.logo {
-        height:20%;
-        width:20%;
+    
+    #SystemBar .logo {
+        width: 40px;
+        height:auto;        
     }
 
     #SystemBarNavigation {
@@ -216,11 +165,11 @@ SMALL DEVICES - MOBILE PHONES, SMALL TABLETS
         height: 100%;
         width: 100%;
         position: fixed;
-        top: 10vh; /* EQUAL TO HEIGHT OF #SystemBar */        
+        top: var(--system-bar-height); /* EQUAL TO HEIGHT OF #SystemBar */     
         right: -100vw;
         display: flex;
         flex-direction:column;
-        gap:2em;
+        gap:1.5em;
         transition: all 0.619s ease-in-out;
     }
 
@@ -236,27 +185,19 @@ SMALL DEVICES - MOBILE PHONES, SMALL TABLETS
         display:flex;
         flex-direction:column;
         gap:1.2em;
-        padding: 3em 3em 0 3em;
+        padding: 2em 2em 0 2em;
     }
 
     #SystemBarNavigation .icon-links {
         display:flex;
         gap:0.67em;
-        padding-left:3em;
-    }
-
-    #SystemBarNavigation .icon-links li a {
-        display:flex;
-        justify-content:center;
-        align-items:center;
-        height:48px;
-        width:48px;
-        border-radius:50%;
+        padding-left:2em;
     }
 
     #SystemBarNavigation .icon-links li a img {
-        height:36px;
-        width:36px;
+        width: 27px;
+        height:auto;
+        
     }
 
     #toggler {
@@ -279,7 +220,6 @@ SMALL DEVICES - MOBILE PHONES, SMALL TABLETS
         height: 100%;
         overflow: hidden;
     }
-
 
     #Menu {
         width: 100%;
@@ -349,13 +289,26 @@ SMALL DEVICES - MOBILE PHONES, SMALL TABLETS
 
     .Hero-Content {
         flex: 1 0 50%;
-        justify-content:flex-start;
+        display:flex;
+        flex-direction:column;
+        justify-content:center;
+        align-items: center;
         overflow-y:hidden;
+    }
+
+    .Hero-Content {
+        order: 2;
+        z-index: 700;
+    }
+
+    .Hero-Content {
+        padding: 0 1em;
     }
 
     .Hero-Content span {
         text-align:center;
     }
+    
     
     .Hero-Image {
         flex: 1 0 50%;
@@ -380,30 +333,8 @@ SMALL DEVICES - MOBILE PHONES, SMALL TABLETS
         scroll-snap-align: center;
     }
 
-    #slide-5-image {
-        background-position: 30% 0;
-    }
-
-    #slide-3-image {
-        background-position:65% 0;
-    }
-
-    #slide-6-image {
-        background-position: 0 30%;
-    }
-
     .Hero-Image {
         order: 1;
-    }
-
-    .Hero-Content {
-        order: 2;
-        z-index:700;
-    }
-
-    .Hero-Content {
-        justify-content:center;
-        padding: 0 1em;
     }
 
     #Hero .slide-arrow {
@@ -420,11 +351,11 @@ SMALL DEVICES - MOBILE PHONES, SMALL TABLETS
     }
 
     #Hero #slide-arrow-next {
-        right:8px;
+        right:var(--slider-arrow-edge-distance);
     }
 
     #Hero #slide-arrow-prev {
-        left: 8px;
+        left: var(--slider-arrow-edge-distance);
     }
 
     #Hero .slide-arrow img {
@@ -436,32 +367,36 @@ SMALL DEVICES - MOBILE PHONES, SMALL TABLETS
         padding:1em 0;
     }
 
-    #Announcement {    
-        flex:1 1 10vh;
+    #Announcement {
+        display:grid;
+        grid-template-columns: 1em min-content 1fr 1em;
+        align-items: center;
     }
 
     #Announcement #caution-sign {
-        height:48px;
-        min-width:48px;
+        grid-column:2/3;
+    }
+
+    #Announcement #caution-sign img {
+        width: 48px;
+        height: auto;
     }
 
     #Announcement .announcement-message {
-        padding-right:48px;
+        grid-column:3/4;
     }
 
     #Upcoming {
-        flex-grow:1;
-        display: flex;
-        flex-direction:column;
+        display: grid;
     }
 
     #Upcoming .upcoming-event-details {
-        padding:2em 0 1em 0;
         display:flex;
         flex-direction:column;
         justify-content:center;
         align-items: center;
         gap:0.33em;
+        text-align:center;
     }
 
     #upcoming-event-registration-button {
@@ -469,9 +404,9 @@ SMALL DEVICES - MOBILE PHONES, SMALL TABLETS
     }
 
     #Upcoming .upcoming-event-countdown-timer {
-        padding:1em 0 2em 0;
+        align-items: center;
         display:flex;
-        justify-content:space-around;
+        justify-content:space-around;        
     }
 
     #Upcoming .upcoming-event-countdown-timer .countdown-card {
@@ -520,6 +455,7 @@ SMALL DEVICES - MOBILE PHONES, SMALL TABLETS
 
     .homepage-sponsor-logo-wide {
         height:100px;
+        width:auto;
     }
 
     #Schedule {
@@ -530,15 +466,16 @@ SMALL DEVICES - MOBILE PHONES, SMALL TABLETS
     }
 
     .table-viewport {
-        padding:1em;
         display: flex;
         flex-direction:column;
         justify-content: center;
+        margin:0 0.5em;
     }
 
     .section-header {
         display:flex;
         justify-content:center;
+        text-align:center;
     }
 
     #Schedule table thead {
@@ -591,14 +528,12 @@ SMALL DEVICES - MOBILE PHONES, SMALL TABLETS
 
     #LatestNews .card .card-content {
         padding: 1em 1em 2em 1em;
+        display:flex;
+        flex-direction:column;
     }
 
     #LatestNews .news-card .news-card-image {
-        height:25vh;
-    }
-
-    #latest-news-1 {
-        background-position:0 50%;
+        height:300px;
     }
 
     #GalleryHero {
@@ -610,7 +545,6 @@ SMALL DEVICES - MOBILE PHONES, SMALL TABLETS
     .gallery-hero-content,
     .gallery-hero-image {
         display:flex;
-
     }
 
     .gallery-hero-content  {
@@ -673,42 +607,712 @@ TABLETS, LAPTOPS, DESKTOPS BELOW ULTRAWIDE
 ****************/
 
 @media only screen and (min-width:600px) {
+    :root {
+        --content-margin:8vw;
+        --schedule-padding-top:2em;
+        --schedule-padding-bottom: 5em;
+        --slide-arrow-size:32px;
+        --slider-arrow-edge-distance:16px;
+    }
+
     #SystemBarNavigation,
     #toggler,
     .nav-label {
         display:none;
     }
 
-    #Logo {flex: 1 1 50%;}
+    #Logo {flex: 1 1 60%;}
     #Affiliations,
     #Social-Links {
         flex: 1 1 25%;
         display:flex;
+        gap:8px;
     }
 
-    #SystemBar img.logo {
-        height:10%;
-        width:10%;
+    #SystemBar {height:10vh;}
+    #Navigation {height:6vh;}
+    #Hero {height:36vh;}
+    #Announcement {height:8vh;}
+    #Upcoming {height:32vh;}
+
+    #SystemBar {
+        display: grid;
+        grid-template-columns: var(--content-margin) 1fr 3fr 1fr var(--content-margin);
     }
+
+    #Affiliations {grid-column:2/3;}
+    #Logo {grid-column: 3/4;}
+    #Social-Links {grid-column:4/5;}
+
+    #Affiliations,
+    #Logo,
+    #Social-Links {align-items: center;}
+
 
     #Affiliations {
-        justify-content:flex-end;
+        justify-content: left;
     }
 
     #Social-Links {
-        justify-content: flex-start;
+        justify-content: right;
     }
 
+    #SystemBar .logo {
+        height:auto;
+        max-width: 40px;
+    }
 
+    #SystemBar .system-bar-button img {
+        width: 24px;
+        height: auto;        
+    }
+
+    #Hero {
+        position:relative;
+    }
+
+    .carousel-navigation-list {
+        z-index:750;
+        height:auto;
+        width:auto;
+        position:absolute;
+        top:98%;
+        left:48%;
+        background: blue;
+    }
+
+    .carousel-navigation-list,
+    .carousel-navigation-item {
+        display: inline-block;
+    }
+
+    .carousel-navigation-button {
+        display:inline-block;
+        height:1rem;
+        width:1rem;
+        background-color:#000;
+        border-radius:50%;
+        font:0;
+        transition:transform 0.1s;
+    }
+
+    .carousel-navigation-list {display: none;}
+
+    #slides-container {
+        height:100%;
+        display:flex;
+        flex-direction:row;
+    }
+
+    #Hero .slide-arrow {
+        position: absolute;
+        top: 50%;
+        z-index: 750;
+        cursor: pointer;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 50%;
+    }
+
+    #Hero .slide-arrow {
+        height: var(--slide-arrow-size);
+        width: var(--slide-arrow-size);
+    }
+
+    #Hero #slide-arrow-next {
+        right: var(--slider-arrow-edge-distance);
+    }
+
+    #Hero #slide-arrow-prev {
+        left: var(--slider-arrow-edge-distance);
+    }
+
+    #Hero .slide-arrow img {
+        height: var(--slide-arrow-size);
+        width: var(--slide-arrow-size);
+    }
+
+    .Hero-Slide {
+        height:100%;
+        width:100%;
+        display:flex;
+    }
+
+    .Hero-Content {
+        display:grid;
+        grid-template-columns:var(--content-margin) 1fr 1em;        
+    }
+
+    .Hero-Content span,
+    .Hero-Content .hero-button {
+        grid-column:2/3;
+    }
+
+    #slide-1-content {
+        grid-template-rows: 1fr repeat(4, min-content) 1fr;
+    }
+
+    #slide-1-content .welcome {
+        grid-row:2/3;
+    }
+    
+    #slide-1-content .shout {
+        grid-row: 3/4;
+    }
+
+    #slide-1-content .verbose {
+        grid-row:4/5;
+    }
+
+    #slide-1-content .hero-button {
+        grid-row: 5/6;
+    }
+
+    .event-slide-details {
+        grid-template-rows: 1fr repeat(7, min-content) 1fr;
+    }
+
+    .event-slide-details .welcome {
+        grid-row: 2/3;
+    }
+    .event-slide-details .event-title {
+        grid-row: 3/4;
+    }
+    .event-slide-details .event-date {
+        grid-row: 4/5;
+    }
+    .event-slide-details .event-time {
+        grid-row: 5/6;
+    }
+    .event-slide-details .event-venue {
+        grid-row: 6/7;
+    }
+    .event-slide-details .verbose {
+        grid-row: 7/8;
+    }
+    .event-slide-details .hero-button {
+        grid-row: 8/9;
+    }
+
+    .hero-button {
+        justify-self: left;
+        margin-top: 16px;
+    }
+
+    .Hero-Content {
+        flex:1 0 50%;
+    }
+
+    .Hero-Image {
+        flex:1 0 50%;
+    }
+
+    #Announcement #caution-sign img {
+        width:64px;
+        height:64px;
+    }
+
+    #Announcement {
+        display: grid;
+        grid-template-columns:var(--content-margin) min-content 3fr var(--content-margin);
+        align-items: center;
+    }
+
+    #caution-sign {grid-column:2/3;}
+    .announcement-message {grid-column:3/4;}
+
+    #Upcoming {
+        display:grid;
+        grid-template-columns:var(--content-margin) 1fr 1fr var(--content-margin);
+    }
+
+    #Upcoming .upcoming-event-details {
+        grid-column:2/3;
+        display:grid;
+        grid-template-rows:1fr repeat(6, min-content) 1fr;
+        justify-content:left;
+        align-items: center;
+    }
+
+    .upcoming-section-header {grid-row:2/3;}
+    .upcoming-event-title {grid-row:3/4;}
+    .upcoming-event-venue {grid-row: 4/5;}
+    .upcoming-event-date {grid-row: 5/6;}
+    .upcoming-event-time {grid-row: 6/7;}
+    #upcoming-event-registration-button {grid-row:7/8;}
+
+    .upcoming-event-title {
+        margin-bottom:0.42em;
+    }
+
+    #upcoming-event-registration-button {
+        margin-top:1em;
+        justify-self:left;
+    }
+
+    #Upcoming .upcoming-event-countdown-timer {
+        grid-column:3/4;
+        display:grid;
+        grid-template-columns:repeat(4, 1fr);
+        justify-items: center;
+        align-items: center;
+    }
+
+    .countdown-card-top {
+        display:flex;
+        justify-content:center;
+        align-content: center;
+    }
+
+    .homepage-sponsor-logo-square {
+        height: 100px;
+        width: 100px;
+    }
+
+    .homepage-sponsor-logo-wide {
+        height: 100px;
+    }
+
+    .Sponsors {
+        flex:1;
+        display:grid;
+        grid-template-columns:var(--content-margin) 1fr var(--content-margin);
+        grid-template-rows:100px min-content min-content 100px;
+    }
+
+    .sponsor-logos {
+        grid-column: 2/3;
+        grid-row: 2/3;
+        padding-bottom:2em;
+    }
+
+    .sponsor-controls {
+        grid-column: 2/3;
+        grid-row: 3/4;
+    }
+
+    .sponsor-logos,
+    .sponsor-controls {
+        display:flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .sponsor-logos {
+        flex-wrap:wrap;
+        gap:4em;
+    }
+
+    .bounty {order:1;}
+    .seven-seas {order:3;}
+    .massy {order: 4;}
+    .gbi {order: 2;}
+    .nsc {order:5;}
+
+    #Schedule {
+        display:grid;
+        grid-template-columns: var(--content-margin) 1fr var(--content-margin);
+        grid-template-rows:var(--schedule-padding-top) min-content min-content var(--schedule-padding-bottom);
+        grid-row-gap:1em;
+    }
+
+    #Schedule table td {
+        padding: 0.67em;
+    }
+
+    #Schedule .section-header {
+        grid-column:2/3;
+        grid-row:2/3;
+        padding-bottom:0.75em;
+        display:flex;
+        justify-content:center;
+        align-items:center;
+    }
+
+    #Schedule .table-viewport {
+        grid-column: 2/3;
+        grid-row: 3/4;
+        display:grid;
+        grid-template-columns:1fr minmax(min-content, 95%) 1fr;
+        grid-template-rows:2em minmax(min-content, 95%) max-content 2em;
+        grid-row-gap:1em;
+    }
+
+    #Schedule .table-viewport table {
+        grid-column: 2/3;
+        grid-row: 2/3;
+    }
+
+    #Schedule .table-viewport-controls {
+        grid-column: 2/3;
+        grid-row: 3/4;
+        display:flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap:wrap;
+        gap:1em;
+    }
+
+    #LatestNews {
+        display:grid;
+        grid-template-columns:1em 1fr 1em;
+        grid-template-rows:2em repeat(5, min-content) 2em;
+        grid-row-gap:2em;
+    }
+
+    #LatestNews .section-header {
+        grid-column:2/3;
+        grid-row:2/3;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #LatestNews .card {
+        display: grid;
+        grid-template-rows: 300px min-content;
+    }
+
+    #LatestNews .card .card-content {
+        display:flex;
+        flex-direction:column;
+    }
+
+    #LatestNews .featured {
+        grid-column: 2/3;
+        grid-row:3/4;
+    }
+
+    #latest-news-1 {
+        grid-column:2/3;
+        grid-row: 4/5;
+    }
+    #latest-news-2 {
+        grid-column: 2/3;
+        grid-row: 5/6;
+    }
+    #latest-news-3 {
+        grid-column: 2/3;
+        grid-row: 6/7;
+    }
+    
+    #GalleryHero {
+        flex:1 0 48vh;
+        position:relative;
+        display:grid;
+        grid-template-columns: var(--content-margin) 1fr 1fr var(--content-margin);
+        grid-template-rows:1fr;
+    }
+
+    #GalleryHero .gallery-hero-content {
+        grid-column: 3/4;
+        grid-row: 1/2;
+        z-index:601;
+        padding:0 2em;
+        display:flex;
+        flex-direction:column;
+        justify-content: center;
+    }
+
+    .gallery-hero-content .verbose {
+        margin:1.5em 0;
+    }
+
+    .gallery-hero-controls {
+        display:flex;
+        justify-content: flex-start;
+        gap:1em;
+    }
+
+    #GalleryHero .gallery-hero-image {
+        grid-column: 2/3;
+        grid-row:1/2;
+    }
+
+    #gallery-hero-overlay {
+        width: 100%;
+        height: 100%;
+        grid-column: 2/4;
+    }
+    
+    #Footer-Content {
+        height:100%;
+        width:100%;
+        padding:4rem 0 3rem 0;
+        display:grid;
+        grid-template-columns:var(--content-margin)repeat(4, auto) var(--content-margin);
+    }
+
+    .footer-category,
+    .footer-category-links {
+        display:flex;
+        flex-direction: column;
+    }
+
+    #about {grid-column:2/3;}
+    #resources {grid-column:3/4 ;}
+    #quick-links {grid-column: 4/5;}
+    #contact {grid-column:5/6;}
+
+    .footer-category-links li {
+        display:inline-block;
+    }
+    
+    #quick-links .footer-category-label,
+    #contact  .footer-category-label {
+        text-align: right;
+    }
+    
+    #quick-links .footer-category-links li,
+    
+    #contact .footer-category-links li {
+        display:flex;
+        justify-content:flex-end;
+        align-items: center;
+    }
+
+    .footer-category-links li {padding:0.13em 0;}
+    .footer-category-links img {padding-right:0.3em;}
+    
+    #Copyright {
+        padding:1em 0;
+    }
 
 }
+
+@media only screen and (min-width:768px) {
+    :root {
+        --content-margin: 10vw;
+    }
+    #SystemBar {height:10vh;}
+    #Navigation {height:7vh;}
+    #Hero {height:36vh;}
+    #Announcement {height:8vh;}
+    #Upcoming {height: 22vh;}
+        
+}
+
+@media only screen and (min-width:800px) {
+    :root {
+        --content-margin: 5vw;
+        --slider-arrow-edge-distance:4px;
+    }
+
+    #Upcoming {
+        height: 28vh;
+    }
+
+    #LatestNews {
+        display:grid;
+        grid-template-columns: var(--content-margin) repeat(2, 1fr) var(--content-margin);
+        grid-template-rows:2em repeat(3, min-content) 2em;
+        grid-column-gap:1em;
+        grid-row-gap:1em;
+    }
+
+    #LatestNews .section-header {
+        grid-row:2/3;
+        grid-column:2/4;
+    }
+
+    #LatestNews .featured {
+        grid-row: 3/4;
+        grid-column:2/3;
+    }
+
+    #latest-news-1 {
+        grid-row:3/4;
+        grid-column:3/4;
+    }
+
+    #latest-news-2 {
+        grid-row: 4/5;
+        grid-column: 2/3;
+    }
+
+    #latest-news-3 {
+        grid-row: 4/5;
+        grid-column: 3/4;
+    }
+}
+
+@media only screen and (min-width:927px) {
+    .bounty {
+        order: 1;
+    }
+
+    .seven-seas {
+        order: 2;
+    }
+
+    .gbi {order:3;}
+    .massy {
+        order: 5;
+    }
+    .nsc {order:4;}
+
+}
+
+@media only screen and (min-width:1280px) {
+    :root {
+        --content-margin: 15vw;
+    }
+
+    #SystemBar {height: 12vh;}
+    #Navigation {height: 7vh;}
+    #Hero {height: 48vh;}
+    #Announcement {height: 8vh;}
+    #Upcoming {height: 28vh;}
+
+    #LatestNews {
+        display: grid;
+        grid-template-columns: var(--content-margin) 1fr 1fr 1fr var(--content-margin);
+        grid-template-rows: 2em repeat(3, min-content) 2em;
+        grid-row-gap: 3em;
+        grid-column-gap:1em;
+    }
+
+    #LatestNews .card {
+        margin:0;
+    }
+
+    #LatestNews .section-header {
+        grid-column: 2/5;
+        grid-row: 2/3;
+    }
+
+    #LatestNews .featured {
+        height:500px;
+        grid-column: 2/5;
+        grid-row: 3/4;
+        display: flex;
+        border-radius: 16px;
+    }
+
+    .featured-news-image,
+    .featured-news-content {
+        width: 50%;
+    }
+
+    .featured-news-image {
+        border-radius: 16px 0 0 16px;
+    }
+
+    .featured-news-content {
+        justify-content: center;
+        padding: 2em 2em;
+    }
+
+    #LatestNews .news-card {
+        grid-row: 4/5;
+        display: grid;
+        grid-template-rows: minmax(24vh, min-content) min-content;
+        grid-gap: 0.5em;
+    }
+
+    #LatestNews .news-card-image {
+        border-radius: 8px;
+    }
+
+    #latest-news-1 {
+        grid-column: 2/3;
+    }
+
+    #latest-news-2 {
+        grid-column: 3/4;
+    }
+
+    #latest-news-3 {
+        grid-column: 4/5;
+    }
+
+    .bounty {order: 1;}
+    .seven-seas {order: 2;}
+    .massy {order: 3;}
+    .gbi {order:4;}
+    .nsc {order:5;}
+
+}
+
+@media only screen and (min-width:1650px) {
+    :root {
+        --content-margin: 20vw;
+        --slide-arrow-size:42px;
+    }
+}
+
+@media only screen and (min-width:1920px) {
+    :root {
+        --content-margin: 25vw;
+    }
+    #SystemBar {height:108px;}
+}
+
 
 /*****************
 EDGE CASE - LANDSCAPE MOBILE PHONES
 *****************/
 
-@media only screen and (max-height:700px) {
-    #Hero {
-        flex:1 0 80vh;
+@media only screen and (max-height:500px) {
+    #SystemBar {
+        height: 20vh;
     }
+    
+    #Navigation {
+        height: 15vh;
+    }
+
+    #Hero {
+        height: 70vh;
+    }
+
+    #Announcement {
+        height: 20vh;
+    }
+
+    #Upcoming {
+        height: 70vh;
+    }
+
+    #Announcement #caution-sign img {
+        width:36px;
+        height:auto;
+    }
+
+    .gallery-hero-content .verbose {
+        margin: 0.1em 0;
+    }
+}
+
+
+/*****************
+EDGE CASE - PORTRAIT MONITORS
+*****************/
+
+@media only screen and (min-height:1080px) {
+    #SystemBar {
+        height:72px;
+    }
+
+    #Navigation {
+        height:48px;
+    }
+
+    #Hero {
+        height: 320px;
+    }
+
+    #Announcement {
+        height: 108px;
+    }
+
+    #Upcoming {
+        height: 232px;
+    }
+
+    #GalleryHero {
+        flex:1 1 20vh;
+    }
+
 }

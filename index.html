@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="global.css">
     <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="images.css">
     <link rel="stylesheet" href="typography.css">
     <title>Archery Guyana</title>
 </head>
@@ -12,11 +13,11 @@
     <header class="header caret-hidden label-bold">
         <div id="SystemBar">    
             <div id="Affiliations">
-                <a class="icon-link" href="#">
+                <a class="button system-bar-button icon-link" href="#">
                     <img src="./static/world-archery-color-logo.png"
                         alt="archery-guyana-affiliate-of-world-archery">
                     </a>
-                <a class="icon-link" href="#">
+                <a class="button system-bar-button icon-link" href="#">
                     <img src="./static/icons8-olympic-rings-48.png"
                         alt="archery-guyana-affiliate-of-olympic-association">
                 </a>
@@ -25,8 +26,8 @@
                 <img src="./static/archery-guyana-rich-logo.jpg" alt="archery-guyana-logo" class="logo">
             </div>            
             <div id="Social-Links">
-                <a class="icon-link" href="#"><img src="./static/icons8-facebook-48.png" alt=""></a>
-                <a class="icon-link" href="#"><img src="./static/icons8-youtube-48.png" alt=""></a>
+                <a class="button system-bar-button" href="#"><img src="./static/icons8-facebook-48.png" alt=""></a>
+                <a class="button system-bar-button" href="#"><img src="./static/icons8-youtube-48.png" alt=""></a>
             </div>
             <input type="checkbox" name="toggler" id="toggler" class="checkbox1 visually-hidden">
             <label for="toggler" class="nav-label">
@@ -47,31 +48,42 @@
                     <li><a class="button membership-button uppercase italic" href="#">Become a Member</a></li>
                 </ul>
                 <ul class="icon-links sidenav-links sidenav-affiliate-links">
-                    <li><a class="icon-link" href="#"><img src="./static/world-archery-color-logo.png" alt="archery-guyana-affiliate-of-world-archery"></a></li>
-                    <li><a class="icon-link" href="#"><img src="./static/icons8-olympic-rings-48.png" alt="archery-guyana-affiliate-of-olympic-association"></a></li>
+                    <li><a class="button system-bar-button" href="#"><img src="./static/world-archery-color-logo.png" alt="archery-guyana-affiliate-of-world-archery"></a></li>
+                    <li><a class="button system-bar-button" href="#"><img src="./static/icons8-olympic-rings-48.png" alt="archery-guyana-affiliate-of-olympic-association"></a></li>
                 </ul>
                 <ul class="icon-links sidenav-links sidenav-social-links">
-                    <li><a class="icon-link" href="#"><img src="./static/icons8-facebook-48.png" alt=""></a></li>
-                    <li><a class="icon-link" href="#"><img src="./static/icons8-youtube-48.png" alt=""></a></li>
+                    <li><a class="button system-bar-button" href="#"><img src="./static/icons8-facebook-48.png" alt=""></a></li>
+                    <li><a class="button system-bar-button" href="#"><img src="./static/icons8-youtube-48.png" alt=""></a></li>
                 </ul>
             </div>                    
         </div>
         <div id="Navigation">
             <ul id="Menu" class="bold">
-                <li id="Events-Menu"><a href="# ">Events</a></li>
-                <li id="Gallery-Menu"><a href="#">Gallery</a></li>
-                <li id="Sponsors-Menu"><a href="#">Sponsors</a></li>
-                <li id="Scores-Menu"><a href="#">Scores</a></li>
-                <li id="News-Menu"><a href="#">News</a></li>
-                <li id="Membership-Menu"><a class="button membership-button" href="#">Become a Member</a></li>
+                <li id="Events-Menu"><a class="main-menu-button" href="# ">Events</a></li>
+                <li id="Gallery-Menu"><a class="main-menu-button" href="#">Gallery</a></li>
+                <li id="Sponsors-Menu"><a class="main-menu-button" href="#">Sponsors</a></li>
+                <li id="Scores-Menu"><a class="main-menu-button" href="#">Scores</a></li>
+                <li id="News-Menu"><a class="main-menu-button" href="#">News</a></li>
+                <li id="Membership-Menu"><a class="button membership-button bold italic uppercase" href="#">Become a Member</a></li>
             </ul>
         </div>
     </header>
-    <main id="Main" class="main">
-        <div id="Hero" class="carousel">
+    <main id="Main" class="main caret-hidden">
+        <div id="Hero" class="carousel caret-hidden">
             <button class="slide-arrow" id="slide-arrow-prev">
                 <img src="./static/icons8-forward-64-color-1.png" alt="archery-guyana-previous-event" class="slide-arrow-prev-icon flipped">
             </button>
+            <ol class="carousel-navigation-list">
+                <li class="carousel-navigation-item">
+                    <a href="#slide-1" class="carousel-navigation-button"></a>
+                </li>
+                <li class="carousel-navigation-item">
+                    <a href="#slide-2" class="carousel-navigation-button"></a>
+                </li>
+                <li class="carousel-navigation-item">
+                    <a href="#slide-3" class="carousel-navigation-button"></a>
+                </li>
+            </ol>
             <button class="slide-arrow" id="slide-arrow-next">
                 <img src="./static/icons8-forward-64-color-1.png" alt="archery-guyana-next-event" class="slide-arrow-next-icon">
             </button>
@@ -81,16 +93,15 @@
                         <span class="welcome h5 capitalize">Encouraging and Promoting Skill in Archery</span>
                         <span class="shout display uppercase">Get Involved!</span>
                         <span class="verbose p1 bold">
-                            Browse the Archery Guyana Event Calendar to view our upcoming events and get
-                            registered!
+                            Browse the Archery Guyana Event Calendar to view our upcoming events and get registered!
                         </span>
                         <a id="event-calendar-button" class="button hero-button" href="#">Event Calendar</a>
                     </div>
                     <div id="slide-1-image" class="Hero-Image"></div>
-                    <div class="vertical-gradient"></div>
+                    <div class="gradient"></div>
                 </div>
                 <div id="slide-2" class="Hero-Slide">
-                    <div id="slide-2-content" class="Hero-Content">
+                    <div id="slide-2-content" class="Hero-Content event-slide-details">
                         <span class="welcome h5 capitalize">Upcoming</span>
                         <span class="event-title bold uppercase underline">Archery Guyana Open Competition</span>
                         <span class="event-date bold capitalize">11 november</span>
@@ -102,10 +113,10 @@
                         <a class="button hero-button register-button" href="#">Register</a>
                     </div>
                     <div id="slide-2-image" class="Hero-Image"></div>
-                    <div class="vertical-gradient"></div>
+                    <div class="gradient"></div>
                 </div>
                 <div id="slide-3" class="Hero-Slide">
-                    <div id="slide-3-content" class="Hero-Content">
+                    <div id="slide-3-content" class="Hero-Content event-slide-details">
                         <span class="welcome h5 capitalize">Concluded</span>
                         <span class="event-title bold uppercase underline">Independence Indoor Shoot Finals</span>
                         <span class="event-date bold capitalize">27-28 MAY</span>
@@ -117,14 +128,14 @@
                         <a class="button hero-button view-scores-button" href="#">View Scores</a>
                     </div>
                     <div id="slide-3-image" class="Hero-Image"></div>
-                    <div class="vertical-gradient"></div>
+                    <div class="gradient"></div>
                 </div>
                 <div id="slide-4" class="Hero-Slide">
-                    <div id="slide-4-content" class="Hero-Content">
+                    <div id="slide-4-content" class="Hero-Content event-slide-details">
                         <span class="welcome h5 capitalize">Concluded</span>
                         <span class="event-title bold uppercase underline">Independence Indoor Shoot Qualification Rounds</span>
                         <span class="event-date bold capitalize">23-24 MAY</span>
-                        <span class="event-time bold uppercase">10AM-3AM</span>
+                        <span class="event-time bold uppercase">10AM-3PM</span>
                         <span class="event-venue bold capitalize">Muslim Youth Organisation</span>
                         <span class="verbose p1 bold">
                             Competition is open to archers from any local club in Guyana.
@@ -132,10 +143,10 @@
                         <a class="button hero-button view-scores-button" href="#">View Scores</a>
                     </div>
                     <div id="slide-4-image" class="Hero-Image"></div>
-                    <div class="vertical-gradient"></div>
+                    <div class="gradient"></div>
                 </div>
                 <div id="slide-5" class="Hero-Slide">
-                    <div id="slide-5-content" class="Hero-Content">
+                    <div id="slide-5-content" class="Hero-Content event-slide-details">
                         <span class="welcome h5 capitalize">Concluded</span>
                         <span class="event-title bold uppercase underline">Archery Guyana Indoor Championship Finals</span>
                         <span class="event-date bold capitalize">17 FEB</span>
@@ -147,10 +158,10 @@
                         <a class="button hero-button view-scores-button" href="#">View Scores</a>
                     </div>
                     <div id="slide-5-image" class="Hero-Image"></div>
-                    <div class="vertical-gradient"></div>
+                    <div class="gradient"></div>
                 </div>
                 <div id="slide-6" class="Hero-Slide">
-                    <div id="slide-6-content" class="Hero-Content">
+                    <div id="slide-6-content" class="Hero-Content event-slide-details">
                         <span class="welcome h5 capitalize">Concluded</span>
                         <span class="event-title bold uppercase underline">Archery Guyana Indoor Championship Qualification Rounds</span>
                         <span class="event-date bold capitalize">15 FEB</span>
@@ -162,16 +173,16 @@
                         <a class="button hero-button view-scores-button" href="#">View Scores</a>
                     </div>
                     <div id="slide-6-image" class="Hero-Image"></div>
-                    <div class="vertical-gradient"></div>
+                    <div class="gradient"></div>
                 </div>
             </div>
         </div>        
         <div id="Announcement">
-            <span id="caution-sign"></span>
-            <span class="announcement-message p1">
+            <div id="caution-sign"><img src="./static/icons8-caution-96-white.png" alt=""></div>
+            <div class="announcement-message p1">
                 ALL BEGINNER CLASSES have a FRIDAY OPTION at 9AM. If you want the Friday option you just go to that
-                specified range fifteen minutes before shoot time listed (9am or 1pm). <span><a class="announcement-read-more" href="#">MORE</a></span>
-            </span>       
+                specified range fifteen minutes before shoot time listed (9am or 1pm).<span><a class="announcement-read-more" href="#">MORE</a></span>
+            </div>
         </div>        
         <div id="Upcoming">
             <div class="upcoming-event-details">
@@ -196,25 +207,25 @@
                     <div class="countdown-card-bottom label-2-bold">Minutes</div>
                 </div>
                 <div class="countdown-card" id="seconds">
-                    <div class="countdown-card-top h4 bolder">9</div>
+                    <div class="countdown-card-top h4 bolder">09</div>
                     <div class="countdown-card-bottom label-2-bold">Seconds</div>
                 </div>
             </div>
         </div>
         <div id="Sponsors-Top" class="Sponsors">
             <div class="sponsor-logos">
-                <img src="./static/bounty-logo.jpg" alt="archery-guyana-sponsored-by-bounty-farm-guyana" class="homepage-sponsor-logo-square">
-                <img src="./static/seven-seas-logo.webp" alt="archery-guyana-sponsored-by-seven-seas" class="homepage-sponsor-logo-square">
-                <img src="./static/guyana-beverages-inc-logo.png" alt="archery-guyana-sponsored-by-guyana-beverages-inc" class="homepage-sponsor-logo-square">
-                <img src="./static/massy-logo.png" alt="archery-guyana-sponsored-by-massy" class="homepage-sponsor-logo-wide">
-                <img src="./static/nsc-logo.jpg" alt="archery-guyana-sponsored-by-national-sports-commission" class="homepage-sponsor-logo-square">
+                <img src="./static/bounty-logo.jpg" alt="archery-guyana-sponsored-by-bounty-farm-guyana" class="homepage-sponsor-logo-square bounty">
+                <img src="./static/seven-seas-logo.webp" alt="archery-guyana-sponsored-by-seven-seas" class="homepage-sponsor-logo-square seven-seas">
+                <img src="./static/massy-logo.png" alt="archery-guyana-sponsored-by-massy" class="homepage-sponsor-logo-wide massy">
+                <img src="./static/guyana-beverages-inc-logo.png" alt="archery-guyana-sponsored-by-guyana-beverages-inc" class="homepage-sponsor-logo-square gbi">                
+                <img src="./static/nsc-logo.jpg" alt="archery-guyana-sponsored-by-national-sports-commission" class="homepage-sponsor-logo-square nsc">
             </div>
             <div class="sponsor-controls">
                 <a class="button sponsors-button label-2-bold" href="#">View All Sponsors</a>
             </div>
         </div>
         <div id="Schedule">
-            <div class="section-header h4 bold uppercase">Events</div>
+            <div class="section-header h4 bold uppercase">Latest Events</div>
             <div class="table-viewport">
                 <table>
                     <thead>
@@ -228,30 +239,37 @@
                     </thead>
                     <tbody>
                         <tr>
-                            <td label="date">11 November 2023</td>
+                            <td label="date">11 NOV 2023</td>
                             <td label="time">3PM-6PM</td>
                             <td label="event">Archery Guyana Open Competition</td>
-                            <td label="venue">Muslim Youth Organisation</td>
+                            <td label="venue">National Park Tarmac</td>
                             <td label="action"><a href="#" class="button table-button">Register</a></td>
                         </tr>
                         <tr>
-                            <td label="date">11 November 2023</td>
-                            <td label="time">3PM-6PM</td>
-                            <td label="event">Archery Guyana Open Competition</td>
+                            <td label="date">27-28 MAY 2023</td>
+                            <td label="time">5PM</td>
+                            <td label="event">Independence Indoor Shoot Finals</td>
                             <td label="venue">Muslim Youth Organisation</td>
                             <td label="action"><a href="#" class="button table-button">View Scores</a></td>
                         </tr>
                         <tr>
-                            <td label="date">11 November 2023</td>
-                            <td label="time">3PM-6PM</td>
-                            <td label="event">Archery Guyana Open Competition</td>
+                            <td label="date">23-24 MAY 2023</td>
+                            <td label="time">10AM - 3PM</td>
+                            <td label="event">Independence Indoor Shoot Qualification Rounds</td>
                             <td label="venue">Muslim Youth Organisation</td>
                             <td label="action"><a href="#" class="button table-button">View Scores</a></td>
                         </tr>
                         <tr>
-                            <td label="date">11 November 2023</td>
-                            <td label="time">3PM-6PM</td>
-                            <td label="event">Archery Guyana Open Competition</td>
+                            <td label="date">17 FEB 2023</td>
+                            <td label="time">5PM</td>
+                            <td label="event">Archery Guyana Indoor Championship Finals</td>
+                            <td label="venue">Muslim Youth Organisation</td>
+                            <td label="action"><a href="#" class="button table-button">View Scores</a></td>
+                        </tr>
+                        <tr>
+                            <td label="date">15 FEB 2023</td>
+                            <td label="time">5PM</td>
+                            <td label="event">Archery Guyana Indoor Championship Qualification Rounds</td>
                             <td label="venue">Muslim Youth Organisation</td>
                             <td label="action"><a href="#" class="button table-button">View Scores</a></td>
                         </tr>
@@ -264,7 +282,7 @@
             </div>
         </div>
         <div id="LatestNews">
-            <div class="section-header h4 bold uppercase">News</div>
+            <div class="section-header h4 bold uppercase">Latest News</div>
             <a class="card featured" href="#">                
                 <div class="card-image featured-news-image">
                     <div class="card-date">
@@ -283,8 +301,8 @@
                     </p>
                 </div>
             </a>
-            <a class="card news-card" href="#">
-                <div id="latest-news-1" class="card-image news-card-image">
+            <a id="latest-news-1" class="card news-card" href="#">
+                <div class="card-image news-card-image news-card-image-1">
                     <div class="card-date">
                         <div class="card-month">MAY</div>
                         <div class="card-day">20</div>
@@ -301,8 +319,8 @@
                     </p>
                 </div>
             </a>
-            <a class="card news-card" href="#">
-                <div id="latest-news-2" class="card-image news-card-image">
+            <a id="latest-news-2" class="card news-card" href="#">
+                <div class="card-image news-card-image news-card-image-2">
                     <div class="card-date">
                         <div class="card-month">MAY</div>
                         <div class="card-day">10</div>
@@ -320,8 +338,8 @@
                     </p>
                 </div>
             </a>
-            <a class="card news-card" href="#">
-                <div id="latest-news-3" class="card-image news-card-image">
+            <a id="latest-news-3" class="card news-card" href="#">
+                <div class="card-image news-card-image news-card-image-3">
                     <div class="card-date">
                         <div class="card-month">APR</div>
                         <div class="card-day">13</div>                        
@@ -349,19 +367,19 @@
                 </div>
             </div>
             <div id="gallery-hero-image" class="gallery-hero-image"></div>
-            <div id="gallery-hero-overlay" class="vertical-gradient"></div>
+            <div id="gallery-hero-overlay" class="gradient"></div>
         </div>
         <div id="Sponsors-Bottom" class="Sponsors">
             <div class="sponsor-logos">
                 <img src="./static/bounty-logo.jpg" alt="archery-guyana-sponsored-by-bounty-farm-guyana"
-                    class="homepage-sponsor-logo-square">
+                    class="homepage-sponsor-logo-square bounty">
                 <img src="./static/seven-seas-logo.webp" alt="archery-guyana-sponsored-by-seven-seas"
-                    class="homepage-sponsor-logo-square">
+                    class="homepage-sponsor-logo-square seven-seas">
                 <img src="./static/guyana-beverages-inc-logo.png" alt="archery-guyana-sponsored-by-guyana-beverages-inc"
-                    class="homepage-sponsor-logo-square">
-                <img src="./static/massy-logo.png" alt="archery-guyana-sponsored-by-massy" class="homepage-sponsor-logo-wide">
+                    class="homepage-sponsor-logo-square gbi">
+                <img src="./static/massy-logo.png" alt="archery-guyana-sponsored-by-massy" class="homepage-sponsor-logo-wide massy">
                 <img src="./static/nsc-logo.jpg" alt="archery-guyana-sponsored-by-national-sports-commission"
-                    class="homepage-sponsor-logo-square">
+                    class="homepage-sponsor-logo-square nsc">
             </div>
             <div class="sponsor-controls">
                 <a class="button sponsors-button label-2-bold" href="#">View All Sponsors</a>

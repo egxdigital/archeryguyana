@@ -1,7 +1,3 @@
-/*
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@1,900&family=Roboto&display=swap');
-*/
-
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,400;1,900&family=Roboto:wght@400;700;900&display=swap');
 body {
     font-family: 'Roboto', sans-serif;
@@ -19,7 +15,8 @@ body {
     font-weight:400;
 }
 
-.bold {
+.bold,
+#Schedule table thead {
     font-weight: 700;
 }
 
@@ -33,7 +30,8 @@ body {
     font-style: italic;
 }
 
-.uppercase {
+.uppercase,
+#Schedule table thead {
     text-transform: uppercase;
 }
 
@@ -101,7 +99,6 @@ body {
     text-transform: uppercase;
 }
 
-
 #Schedule table td::before {
     font-weight: bold;
     text-transform: uppercase;
@@ -120,7 +117,7 @@ body {
     }
 
     .h1 {
-        font-size:calc(50.2px/1.2/1.2);
+        font-size:calc(41.8px/1.2/1.2);
     }
 
     /*
@@ -135,6 +132,70 @@ body {
     }
     
     .p1 {
+        font-size:calc(16px/1.2);
         text-align:center;
+    }
+}
+
+@media only screen and (min-width:600px) {
+    .display {
+        font-size: calc(50.2px/1.2/1.2/1.2);
+    }
+
+    .h1 {
+        font-size: calc(41.8px/1.2/1.2/1.2/1.2);
+        line-height: calc(56px/1.2);
+    }
+
+    .h5 {
+        font-size: calc(20.2px/1.2/1.2/1.2);
+    }
+    .p1 {
+        font-size: calc(16px/1.2);          
+    }
+
+    .button {font-size:calc(16px/1.2);}
+    .upcoming-event-title {font-size:calc(16px/1.2);}
+    
+    #Schedule table td {
+        font-size:calc(16px/1.2);
+    }
+
+}
+
+@media only screen and (min-width:768px) {
+    .h1 {
+            font-size: calc(50.2px/1.2/1.2);
+    }
+    .h5 {
+        font-size: calc(20.2px/1.2/1.2);
+    }
+    .p1 {
+        font-size: calc(16px);
+    }
+}
+
+@media only screen and (min-width:1280px) {
+    .display {
+        font-size: calc(50.2px/1.2/1.2/1.2);
+    }
+
+    .h1 {
+        font-size: calc(50.2px/1.2/1.2);
+    }
+
+    .h5 {
+        font-size: calc(20.2px/1.2/1.2);
+    }
+
+}
+
+/*************/
+/* EDGE CASES*/
+/* ***********/
+
+@media only screen and (max-height:400px) {
+    .p1 {
+        font-size: calc(16px/1.2);
     }
 }

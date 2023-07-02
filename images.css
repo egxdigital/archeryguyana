@@ -1,0 +1,161 @@
+/* HERO SLIDER IMAGES */
+
+#slide-1-image {
+    background: url("./static/archery-guyana-public.jpg");
+    background-size: cover;
+}
+
+
+#slide-2-image {
+    background: url("./static/archery-guyana-friendly-officials.jpg");
+    background-size: cover;
+}
+
+#slide-3-image {
+    background: url("./static/archery-guyana-men-indoor-winners.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+#slide-4-image {
+    background: url("./static/archery-guyana-firing-squad.jpg");
+    background-size: cover;
+}
+
+#slide-5-image {
+    background: url("./static/archery-guyana-indoor-shoot-may-3.jpg");
+    background-size: cover;
+}
+
+#slide-6-image {
+    background: url("./static/archery-guyana-bows-up.jpg");
+    background-size: cover;
+}
+
+#gallery-hero-image {
+    background: url("./static/archery-guyana-red-team-focussed.jpg");
+    background-size: cover;
+}
+
+.featured-news-image {
+    background: url("./static/archery-guyana-group-hug-white.jpg");
+    background-size: cover;
+}
+
+.news-card-image-1 {
+    background: url("./static/archery-guyana-massy-sponsorship.jpg");
+    background-size:cover;
+
+}
+
+.news-card-image-2 {
+    background: url("./static/archery-guyana-svc-school-introducing-the-bow.jpg");
+    background-size: cover;
+}
+
+.news-card-image-3 {
+    background: url("./static/archery-guyana-ix-copa-merengue-santo-domingo.jpg");
+    background-size: cover;
+}
+
+@media screen and (max-width:600px) {
+    #slide-2-image {
+        background-position: 15% 0;
+    }
+
+    #slide-3-image {
+        background-position: 65% 0;
+    }
+    
+    #slide-5-image {
+        background-position: 30% 0;
+    }
+
+    #slide-6-image {
+        background-position: 0 30%;
+    }
+
+    .homepage-sponsor-logo-square {
+        width: 80px;
+        height: 80px;
+    }
+
+    .homepage-sponsor-logo-wide {
+        height: 100px;
+        width: auto;
+    }
+
+    .news-card-image-1,
+    .news-card-image-2,
+    .news-card-image-3 {
+        background-position: center;
+    }
+
+}
+
+@media screen and (min-width:600px) {
+    #slide-3-image {
+        background-position: 60% 0;
+    }
+    .featured-news-image {background-position: 50% 40%;}
+    .news-card-image-1 {background-position: 0 50%;}
+    #gallery-hero-image {background-position: 35% 0;}
+    
+}
+
+@media screen and (min-width:768px) {
+    .news-card-image-2 {
+        background-position: 0 50%;
+    }
+}
+
+
+@media screen and (min-width: 800px) {
+    .news-card-image-1,
+    .news-card-image-2,
+    .news-card-image-3 {
+        background-position: center;
+    }
+}
+
+@media screen and (min-width:900px) {
+    #slide-6-image {
+        background-position: 0 40%;
+    }
+}
+
+@media screen and (min-width:1280px) {
+    .logo {
+        max-width:50px !important;
+        height:auto;
+    }
+
+    #slide-5-image {
+        background-position: 0 45%;
+    }
+
+    .news-card-image-3 {
+        background-position: 50% 0;
+    }
+}
+
+@media screen and (min-width:1650px) {
+    #slide-2-image {
+            background-position: 0 10%;
+        }
+    #slide-3-image {
+        background-position: 0 40%;
+    }
+}
+
+
+@media screen and (min-width:2560px) {
+    #slide-1-image {
+        background-position:0 24%;
+    }
+
+    #slide-4-image {
+        background-position: 0 24%;
+    }
+
+}
