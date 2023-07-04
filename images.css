@@ -1,7 +1,7 @@
 /* HERO SLIDER IMAGES */
 
 #slide-1-image {
-    background: url("./static/archery-guyana-public.jpg");
+    background: url("./static/archery-guyana-long-range-white-team.jpeg");
     background-size: cover;
 }
 
@@ -151,7 +151,7 @@
 
 @media screen and (min-width:2560px) {
     #slide-1-image {
-        background-position:0 24%;
+        background-position:0 60%;
     }
 
     #slide-4-image {

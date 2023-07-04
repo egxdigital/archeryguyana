@@ -25,6 +25,7 @@ body {
 }
 
 .italic,
+.event-slide-details .verbose,
 .card-day,
 .news-card-title {
     font-style: italic;

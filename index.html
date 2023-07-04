@@ -11,7 +11,7 @@
 </head>
 <body class="container">
     <header class="header caret-hidden label-bold">
-        <div id="SystemBar">    
+        <div id="SystemBar">
             <div id="Affiliations">
                 <a class="button system-bar-button icon-link" href="#">
                     <img src="./static/world-archery-color-logo.png"
@@ -203,11 +203,11 @@
                     <div class="countdown-card-bottom label-2-bold">Hours</div>
                 </div>
                 <div class="countdown-card">
-                    <div id="minutes" class="countdown-card-top h4 bolder">18</div>
+                    <div id="minutes" class="countdown-card-top h4 bolder"></div>
                     <div class="countdown-card-bottom label-2-bold">Minutes</div>
                 </div>
                 <div class="countdown-card">
-                    <div id="seconds" class="countdown-card-top h4 bolder">09</div>
+                    <div id="seconds" class="countdown-card-top h4 bolder"></div>
                     <div class="countdown-card-bottom label-2-bold">Seconds</div>
                 </div>
             </div>
@@ -448,6 +448,8 @@
                 document.body.classList.remove("stop-scrolling")
             }
         });
+
+        
         // Set the date we're counting down to
         let countDownDate = new Date("Nov 11, 2023 15:00:00").getTime();
         
@@ -463,7 +465,7 @@
         let days = Math.floor(distance / (1000 * 60 * 60 * 24));
         let hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
         let minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-        let seconds = Math.floor((distance % (1000 * 60)) / 1000);
+        let seconds = Number(Math.floor((distance % (1000 * 60)) / 1000)).toString().padStart(2, '0');
 
         // Output the result in an element with id="demo"
         document.getElementById("days").innerHTML = days;
@@ -477,6 +479,7 @@
             document.getElementById("demo").innerHTML = "EXPIRED";
         }
         }, 1000);
+        
         
     </script>
 </body>

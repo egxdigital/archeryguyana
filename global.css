@@ -1,11 +1,42 @@
 :root {
+    /*
     --color-primary-1:#4157ac;
     --color-primary-2:#0BF40A;
     --color-primary-3:#fff109;
     --color-primary-4:#DF2733;
-    --color-primary-1-rgb:rgb(65,87,172);
-    --color-primary-2-rgb:rgb(11,244,10);
-    --color-primary-3-rgb:rgb(255,241,9);
+    */
+
+    /*
+    --color-primary-1: #4157ac;
+    --color-primary-2: #59FFA0;
+    --color-primary-3: #FFED65;
+    --color-primary-4: #BA274A;
+
+    --color-primary-1-rgb:65, 87, 172;
+    --color-primary-2-rgb:89, 255, 160;
+    --color-primary-3-rgb:255, 237, 101;
+    */
+
+    --color-primary-1: #4157ac;
+    --color-primary-2: #16f4d0;
+    --color-primary-3: #FFFC31;
+    --color-primary-4: #BA274A;
+
+    --color-primary-1-rgb: 65, 87, 172;
+    --color-primary-2-rgb: 22, 244, 208;
+    --color-primary-3-rgb: 255, 252, 49;
+    
+    /*
+    --color-primary-1: #4157ac;
+    --color-primary-2: #26c485;
+    --color-primary-3: #ffcb47;
+    --color-primary-4: #944654;
+
+    --color-primary-1-rgb: 65, 87, 172;
+    --color-primary-2-rgb: 38, 196, 133;
+    --color-primary-3-rgb: 255, 203, 71;
+    */
+
     --color-bg-light:#fff;
     --color-text-light:#fff;
     --color-text-dark:rgba(0,0,0, 0.67);
@@ -138,6 +169,7 @@ a:visited {
     color:var(--color-primary-2);
 }
 
+
 #SystemBar,
 #SystemBarNavigation,
 .system-bar-button,
@@ -149,6 +181,7 @@ a:visited {
 #Schedule table td {
     background: var(--color-table-cell-mobile);
 }
+
 
 #Announcement {
     background: var(--color-primary-4);
@@ -203,15 +236,15 @@ td {
     width: 100%;
     background-image:
         linear-gradient(to top,
-            rgba(11, 244, 10, 0.25),
-            rgba(11, 244, 10, 0.35),
-            rgba(11, 244, 10, 0.55),
-            rgba(11, 244, 10, 1),
-            rgba(255, 241, 9, 1),
-            rgba(255, 241, 9, 0.35),
-            rgba(255, 241, 9, 0.25),
-            rgba(255, 241, 9, 0.15),
-            rgba(255, 241, 9, 0.1));
+            rgba(var(--color-primary-2-rgb), 0.25),
+            rgba(var(--color-primary-2-rgb), 0.35),
+            rgba(var(--color-primary-2-rgb), 0.55),
+            rgba(var(--color-primary-3-rgb), 1),
+            rgba(var(--color-primary-2-rgb), 1),
+            rgba(var(--color-primary-2-rgb), 0.35),
+            rgba(var(--color-primary-2-rgb), 0.25),
+            rgba(var(--color-primary-2-rgb), 0.15),
+            rgba(var(--color-primary-2-rgb), 0.1));
 }
 
 /*---------*/
@@ -359,33 +392,33 @@ td {
         width: 60%;
         background-image:
             linear-gradient(to right,
-                rgba(11, 244, 10, 1),
-                rgba(255, 241, 9, 1),
-                rgba(255, 241, 9, 0.25),
-                rgba(255, 241, 9, 0.13),
-                rgba(255, 241, 9, 0.11),
-                rgba(255, 241, 9, 0));
+                rgba(var(--color-primary-2-rgb), 1),
+                rgba(var(--color-primary-3-rgb), 1),
+                rgba(var(--color-primary-3-rgb), 0.25),
+                rgba(var(--color-primary-3-rgb), 0.13),
+                rgba(var(--color-primary-3-rgb), 0.11),
+                rgba(var(--color-primary-3-rgb), 0));
     }
 
     #gallery-hero-overlay {
         background-image:
             linear-gradient(to left,
-                rgba(11, 244, 10, 1),
-                rgba(11, 244, 10, 0.55),
-                rgba(11, 244, 10, 0.35),
-                rgba(255, 241, 9, 1),
-                rgba(255, 241, 9, 0.25),
-                rgba(255, 241, 9, 0.15),
-                rgba(255, 241, 9, 0.1));
+                rgba(var(--color-primary-2-rgb), 1),
+                rgba(var(--color-primary-2-rgb), 0.55),
+                rgba(var(--color-primary-2-rgb), 0.35),
+                rgba(var(--color-primary-3-rgb), 1),
+                rgba(var(--color-primary-3-rgb), 0.25),
+                rgba(var(--color-primary-3-rgb), 0.15),
+                rgba(var(--color-primary-3-rgb), 0.1));
         background-image:
                 linear-gradient(to right,
-                    rgba(11, 244, 10, 1),
-                    rgba(11, 244, 10, 0.55),
-                    rgba(11, 244, 10, 0.35),
-                    rgba(255, 241, 9, 1),
-                    rgba(255, 241, 9, 0.25),
-                    rgba(255, 241, 9, 0.15),
-                    rgba(255, 241, 9, 0.1));
+                    rgba(var(--color-primary-2-rgb), 1),
+                    rgba(var(--color-primary-2-rgb), 0.55),
+                    rgba(var(--color-primary-2-rgb), 0.35),
+                    rgba(var(--color-primary-3-rgb), 1),
+                    rgba(var(--color-primary-3-rgb), 0.25),
+                    rgba(var(--color-primary-3-rgb), 0.15),
+                    rgba(var(--color-primary-3-rgb), 0.1));
     }
 
     #Schedule table td {

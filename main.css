@@ -410,14 +410,12 @@ SMALL DEVICES - MOBILE PHONES, SMALL TABLETS
     }
 
     #Upcoming .upcoming-event-countdown-timer .countdown-card {
-        width:64px;
-        height:64px;
         display: flex;
         flex-direction:column;
         justify-content: center;
         align-items: center;
     }
-
+    
     .countdown-card-top,
     .countdown-card-bottom {
         text-align: center;
@@ -798,6 +796,9 @@ TABLETS, LAPTOPS, DESKTOPS BELOW ULTRAWIDE
         grid-row: 8/9;
     }
 
+    .event-slide-details .event-title {margin-bottom:0.33em;}
+    .event-slide-details .verbose {margin-top: 0.5em;}
+
     .hero-button {
         justify-self: left;
         margin-top: 16px;
@@ -1112,8 +1113,8 @@ TABLETS, LAPTOPS, DESKTOPS BELOW ULTRAWIDE
         display:grid;
         grid-template-columns: var(--content-margin) repeat(2, 1fr) var(--content-margin);
         grid-template-rows:2em repeat(3, min-content) 2em;
-        grid-column-gap:1em;
-        grid-row-gap:1em;
+        grid-column-gap:2em;
+        grid-row-gap:2em;
     }
 
     #LatestNews .section-header {
